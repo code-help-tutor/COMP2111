@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.poIdentifier name="MEMBER" org.eventb.core.type="ℙ(MEMBER)"/>
+<org.eventb.core.poIdentifier name="maxloan" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="maxloao" org.eventb.core.predicate="finite(MEMBER)" org.eventb.core.source="/Library/Library_ctx.buc|org.eventb.core.contextFile#Library_ctx|org.eventb.core.axiom#axm1A"/>
+<org.eventb.core.poPredicate name="maxloap" org.eventb.core.predicate="finite(BOOK)" org.eventb.core.source="/Library/Library_ctx.buc|org.eventb.core.contextFile#Library_ctx|org.eventb.core.axiom#axm2A"/>
+<org.eventb.core.poPredicate name="maxloaq" org.eventb.core.predicate="maxloan∈ℕ1" org.eventb.core.source="/Library/Library_ctx.buc|org.eventb.core.contextFile#Library_ctx|org.eventb.core.axiom#__-UCMFzWEeC23oZAk6yf5g"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Library/Library.bpo|org.eventb.core.poFile#Library|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="books" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.poIdentifier name="borrowed" org.eventb.core.type="ℙ(BOOK×MEMBER)"/>
+<org.eventb.core.poIdentifier name="members" org.eventb.core.type="ℙ(MEMBER)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/Library.bpo|org.eventb.core.poFile#Library|org.eventb.core.poPredicateSet#EVTALLHYPLibrary_ct\|"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(BOOK×MEMBER))∈(∅ ⦂ ℙ(BOOK)) ⇸ (∅ ⦂ ℙ(MEMBER))" org.eventb.core.source="/Library/Library.bum|org.eventb.core.machineFile#Library|org.eventb.core.invariant#inv1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/Library.bum|org.eventb.core.machineFile#Library|org.eventb.core.event#evt1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/Library.bum|org.eventb.core.machineFile#Library|org.eventb.core.invariant#inv1"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Library/Library.bpo|org.eventb.core.poFile#Library|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Library/Library.bpo|org.eventb.core.poFile#Library|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Library/Library.bpo|org.eventb.core.poFile#Library|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTLibrary_ct|" org.eventb.core.parentSet="/Library/Library.bpo|org.eventb.core.poFile#Library|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="borrowed'" org.eventb.core.type="ℙ(BOOK×MEMBER)"/>
+<org.eventb.core.poIdentifier name="books'" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.poIdentifier name="members'" org.eventb.core.type="ℙ(MEMBER)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPLibrary_ct|" org.eventb.core.parentSet="/Library/Library.bpo|org.eventb.core.poFile#Library|org.eventb.core.poPredicateSet#EVTIDENTLibrary_ct\|" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poSequent name="NewMember/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/Library.bpo|org.eventb.core.poFile#Library|org.eventb.core.poPredicateSet#EVTALLHYPLibrary_ct}"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="borrowed∈books ⇸ members∪{member}" org.eventb.core.source="/Library/Library.bum|org.eventb.core.machineFile#Library|org.eventb.core.invariant#inv1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/Library.bum|org.eventb.core.machineFile#Library|org.eventb.core.event#evt2"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/Library.bum|org.eventb.core.machineFile#Library|org.eventb.core.invariant#inv1"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Library/Library.bpo|org.eventb.core.poFile#Library|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Library/Library.bpo|org.eventb.core.poFile#Library|org.eventb.core.poSequent#NewMember\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Library/Library.bpo|org.eventb.core.poFile#Library|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTLibrary_ct}" org.eventb.core.parentSet="/Library/Library.bpo|org.eventb.core.poFile#Library|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="member" org.eventb.core.type="MEMBER"/>
+<org.eventb.core.poIdentifier name="members'" org.eventb.core.type="ℙ(MEMBER)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPLibrary_ct}" org.eventb.core.parentSet="/Library/Library.bpo|org.eventb.core.poFile#Library|org.eventb.core.poPredicateSet#EVTIDENTLibrary_ct}" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="member∈MEMBER ∖ members" org.eventb.core.source="/Library/Library.bum|org.eventb.core.machineFile#Library|org.eventb.core.event#evt2|org.eventb.core.guard#internal_grd1"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="AddBook/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/Library.bpo|org.eventb.core.poFile#Library|org.eventb.core.poPredicateSet#EVTALLHYPLibrary_ct~"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="borrowed∈books∪{book} ⇸ members" org.eventb.core.source="/Library/Library.bum|org.eventb.core.machineFile#Library|org.eventb.core.invariant#inv1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/Library.bum|org.eventb.core.machineFile#Library|org.eventb.core.event#evt3"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/Library.bum|org.eventb.core.machineFile#Library|org.eventb.core.invariant#inv1"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Library/Library.bpo|org.eventb.core.poFile#Library|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Library/Library.bpo|org.eventb.core.poFile#Library|org.eventb.core.poSequent#AddBook\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Library/Library.bpo|org.eventb.core.poFile#Library|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTLibrary_ct~" org.eventb.core.parentSet="/Library/Library.bpo|org.eventb.core.poFile#Library|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="book" org.eventb.core.type="BOOK"/>
+<org.eventb.core.poIdentifier name="books'" org.eventb.core.type="ℙ(BOOK)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPLibrary_ct~" org.eventb.core.parentSet="/Library/Library.bpo|org.eventb.core.poFile#Library|org.eventb.core.poPredicateSet#EVTIDENTLibrary_ct~" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="book∈BOOK ∖ books" org.eventb.core.source="/Library/Library.bum|org.eventb.core.machineFile#Library|org.eventb.core.event#evt3|org.eventb.core.guard#internal_grd1"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="Borrrow/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/Library.bpo|org.eventb.core.poFile#Library|org.eventb.core.poPredicateSet#EVTALLHYPLibrary_cu'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="borrowed{book ↦ member}∈books ⇸ members" org.eventb.core.source="/Library/Library.bum|org.eventb.core.machineFile#Library|org.eventb.core.invariant#inv1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/Library.bum|org.eventb.core.machineFile#Library|org.eventb.core.event#evt4"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/Library.bum|org.eventb.core.machineFile#Library|org.eventb.core.invariant#inv1"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Library/Library.bpo|org.eventb.core.poFile#Library|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Library/Library.bpo|org.eventb.core.poFile#Library|org.eventb.core.poSequent#Borrrow\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Library/Library.bpo|org.eventb.core.poFile#Library|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTLibrary_cu'" org.eventb.core.parentSet="/Library/Library.bpo|org.eventb.core.poFile#Library|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="borrowed'" org.eventb.core.type="ℙ(BOOK×MEMBER)"/>
+<org.eventb.core.poIdentifier name="book" org.eventb.core.type="BOOK"/>
+<org.eventb.core.poIdentifier name="member" org.eventb.core.type="MEMBER"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPLibrary_cu'" org.eventb.core.parentSet="/Library/Library.bpo|org.eventb.core.poFile#Library|org.eventb.core.poPredicateSet#EVTIDENTLibrary_cu'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="book∈books" org.eventb.core.source="/Library/Library.bum|org.eventb.core.machineFile#Library|org.eventb.core.event#evt4|org.eventb.core.guard#internal_grd1"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="member∈members" org.eventb.core.source="/Library/Library.bum|org.eventb.core.machineFile#Library|org.eventb.core.event#evt4|org.eventb.core.guard#internal_grd2"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="book∉dom(borrowed)" org.eventb.core.source="/Library/Library.bum|org.eventb.core.machineFile#Library|org.eventb.core.event#evt4|org.eventb.core.guard#internal_grd3"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="Return/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/Library.bpo|org.eventb.core.poFile#Library|org.eventb.core.poPredicateSet#EVTALLHYPLibrary_cu("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{book} ⩤ borrowed∈books ⇸ members" org.eventb.core.source="/Library/Library.bum|org.eventb.core.machineFile#Library|org.eventb.core.invariant#inv1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/Library.bum|org.eventb.core.machineFile#Library|org.eventb.core.event#evt5"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/Library.bum|org.eventb.core.machineFile#Library|org.eventb.core.invariant#inv1"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Library/Library.bpo|org.eventb.core.poFile#Library|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Library/Library.bpo|org.eventb.core.poFile#Library|org.eventb.core.poSequent#Return\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Library/Library.bpo|org.eventb.core.poFile#Library|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTLibrary_cu(" org.eventb.core.parentSet="/Library/Library.bpo|org.eventb.core.poFile#Library|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="borrowed'" org.eventb.core.type="ℙ(BOOK×MEMBER)"/>
+<org.eventb.core.poIdentifier name="book" org.eventb.core.type="BOOK"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPLibrary_cu(" org.eventb.core.parentSet="/Library/Library.bpo|org.eventb.core.poFile#Library|org.eventb.core.poPredicateSet#EVTIDENTLibrary_cu(" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="book∈dom(borrowed)" org.eventb.core.source="/Library/Library.bum|org.eventb.core.machineFile#Library|org.eventb.core.event#evt5|org.eventb.core.guard#internal_grd1"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Library/Library.bpo|org.eventb.core.poFile#Library|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="books⊆BOOK" org.eventb.core.source="/Library/Library.bum|org.eventb.core.machineFile#Library|org.eventb.core.invariant#inv1I"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="members⊆MEMBER" org.eventb.core.source="/Library/Library.bum|org.eventb.core.machineFile#Library|org.eventb.core.invariant#inv2I"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="borrowed∈books ⇸ members" org.eventb.core.source="/Library/Library.bum|org.eventb.core.machineFile#Library|org.eventb.core.invariant#inv1"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

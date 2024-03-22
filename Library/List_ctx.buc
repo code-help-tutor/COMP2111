@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.comment="This context presents a small theory of lists.&#10;Lists might also be called sequences.&#10;Both injective and non-injective lists will be modelled.&#10;All elements of an injective list are distinct." org.eventb.core.configuration="org.eventb.core.fwd;org.animb.valuation.valBase" version="3">
+<org.eventb.core.axiom name="axm1" org.eventb.core.label="axm1" org.eventb.core.predicate="LENGTH ∈ ℕ"/>
+<org.eventb.core.axiom name="axm2" org.eventb.core.label="axm2" org.eventb.core.predicate="LIST = {l∣l ∈ ℕ1 ⇸ MEMBER ∧ dom(l) = 1‥card(l)}"/>
+<org.eventb.core.axiom name="element5" org.eventb.core.label="axm60" org.eventb.core.predicate="finite(LIST)"/>
+<org.eventb.core.axiom name="axm3" org.eventb.core.comment="" org.eventb.core.label="axm3" org.eventb.core.predicate="∅ ∈ LIST" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="axm4" org.eventb.core.label="axm4" org.eventb.core.predicate="ILIST = {l∣l ∈ LIST ∧ l ∈ ℕ1 ⤔ MEMBER}"/>
+<org.eventb.core.axiom name="axm5" org.eventb.core.label="axm5" org.eventb.core.predicate="ILIST ⊂ LIST" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="axm6" org.eventb.core.comment="" org.eventb.core.label="axm6" org.eventb.core.predicate="∅ ∈ ILIST"/>
+<org.eventb.core.axiom name="axm7" org.eventb.core.comment="" org.eventb.core.label="axm7" org.eventb.core.predicate="∀l·l ∈ ILIST ⇔ l ∈ LIST ∧ l ∈ 1‥LENGTH ⤔ MEMBER " org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="axm8" org.eventb.core.label="axm8" org.eventb.core.predicate="∀l·l ∈ LIST ⇒ ran(l) = l[dom(l)]" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="axm9" org.eventb.core.label="axm9" org.eventb.core.predicate="∀l·l ∈ LIST ⇒ ran(l) = l[1‥card(l)]" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="element4" org.eventb.core.label="axm10" org.eventb.core.predicate="∀l·l ∈ LIST ∧ card(ran(l)) = card(dom(l))&#10;⇒ l ∈ ILIST" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="axm10" org.eventb.core.label="axm11" org.eventb.core.predicate="JOIN ∈ (LIST × LIST) → LIST"/>
+<org.eventb.core.axiom name="axm11" org.eventb.core.label="axm12" org.eventb.core.predicate="dom(JOIN) = LIST×LIST" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="axm12" org.eventb.core.comment="" org.eventb.core.label="axm13" org.eventb.core.predicate="∀l1,l2·l1 ∈ LIST ∧ l2 ∈ LIST&#10;⇒&#10;dom(JOIN(l1 ↦ l2)) = 1‥card(l1)+card(l2)"/>
+<org.eventb.core.axiom name="axm13" org.eventb.core.label="axm14" org.eventb.core.predicate="∀l1,l2,i·l1 ∈ LIST ∧ l2 ∈ LIST ∧ i ∈ dom(JOIN(l1 ↦ l2))&#10;⇒&#10;(i ∈ 1‥card(l1) ⇒ JOIN(l1 ↦ l2)(i) = l1(i))&#10;∧&#10;(i−card(l1) ∈ 1‥card(l2) ⇒ JOIN(l1 ↦ l2)(i) = l2(i−card(l1)))"/>
+<org.eventb.core.axiom name="element2" org.eventb.core.label="axm15" org.eventb.core.predicate="∀l·l ∈ LIST&#10;⇒&#10;JOIN(l ↦ ∅) = l" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="element3" org.eventb.core.label="axm16" org.eventb.core.predicate="∀l·l ∈ LIST&#10;⇒&#10;JOIN(∅ ↦ l) = l" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="axm14" org.eventb.core.label="axm17" org.eventb.core.predicate="∀l1,l2·l1 ∈ ILIST ∧ l2 ∈ ILIST ∧ ran(l1) ∩ ran(l2) = ∅&#10;⇒&#10;JOIN(l1 ↦ l2) ∈ ILIST" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="axm15" org.eventb.core.label="axm18" org.eventb.core.predicate="∀l1,l2·l1 ∈ LIST ∧ l2 ∈ LIST&#10;⇒&#10;ran(JOIN(l1 ↦ l2)) = ran(l1) ∪ ran(l2)" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="axm16" org.eventb.core.label="axm19" org.eventb.core.predicate="∀l1,l2·l1 ∈ LIST ∧ l2 ∈ LIST&#10;⇒&#10;card(JOIN(l1 ↦ l2)) = card(l1) + card(l2)" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="axm17" org.eventb.core.label="axm20" org.eventb.core.predicate="APPEND ∈ (LIST × MEMBER) → LIST"/>
+<org.eventb.core.axiom name="axm18" org.eventb.core.label="axm21" org.eventb.core.predicate="dom(APPEND) = LIST×MEMBER" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="axm19" org.eventb.core.label="axm22" org.eventb.core.predicate="∀l,m·l ∈ LIST&#10;⇒&#10;dom(APPEND(l ↦ m)) = 1‥card(l)+1"/>
+<org.eventb.core.axiom name="axm20" org.eventb.core.label="axm23" org.eventb.core.predicate="∀l,m,i·l ∈ LIST ∧ i ∈ dom(APPEND(l ↦ m))&#10;⇒&#10;(i ∈ dom(l) ⇒ APPEND(l ↦ m)(i) = l(i))&#10;∧&#10;(i = card(l)+1 ⇒ APPEND(l ↦ m)(i) = m)"/>
+<org.eventb.core.axiom name="axm21" org.eventb.core.label="axm24" org.eventb.core.predicate="∀l,m·l ∈ LIST ∧ m ∈ MEMBER&#10;⇒&#10;ran(APPEND(l ↦ m)) = ran(l) ∪ {m}" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="axm22" org.eventb.core.label="axm25" org.eventb.core.predicate="∀l,m·l ∈ LIST ∧ m ∈ MEMBER&#10;⇒&#10;card(APPEND(l ↦ m)) = card(l) + 1" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="axm23" org.eventb.core.label="axm26" org.eventb.core.predicate="∀l,m·l ∈ ILIST ∧ m ∈ MEMBER ∧ m ∉ ran(l)&#10;⇒&#10;APPEND(l ↦ m) ∈ ILIST" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="axm24" org.eventb.core.label="axm27" org.eventb.core.predicate="IAPPEND ∈ (ILIST ×  MEMBER) →   ILIST"/>
+<org.eventb.core.axiom name="axm25" org.eventb.core.label="axm28" org.eventb.core.predicate="dom(IAPPEND) = ILIST×MEMBER" org.eventb.core.theorem="true"/>
+<org.eventb.core.constant name="cst1" org.eventb.core.comment="Finite limit on length of lists" org.eventb.core.identifier="LENGTH"/>
+<org.eventb.core.constant name="cst2" org.eventb.core.comment="Set of lists" org.eventb.core.identifier="LIST"/>
+<org.eventb.core.constant name="cst3" org.eventb.core.comment="Set of injective lists" org.eventb.core.identifier="ILIST"/>
+<org.eventb.core.constant name="cst4" org.eventb.core.comment="List concatenation operator" org.eventb.core.identifier="JOIN"/>
+<org.eventb.core.constant name="cst5" org.eventb.core.comment="Append an item to tail of list" org.eventb.core.identifier="APPEND"/>
+<org.eventb.core.constant name="cst6" org.eventb.core.comment="Append maintaining injectivity" org.eventb.core.identifier="IAPPEND"/>
+<org.eventb.core.constant name="cst7" org.eventb.core.comment="Delete head of list" org.eventb.core.identifier="DEQUEUE"/>
+<org.eventb.core.constant name="cst8" org.eventb.core.comment="Delete an element from any position of a list" org.eventb.core.identifier="DELETE"/>
+<org.eventb.core.constant name="cst9" org.eventb.core.comment="Delete an element from an injective list" org.eventb.core.identifier="IDELETE"/>
+<org.eventb.core.extendsContext name="element1" org.eventb.core.target="Library_ctx"/>
+<org.eventb.core.axiom name="axm26" org.eventb.core.label="axm29" org.eventb.core.predicate="∀l,m·l ∈ LIST&#10;⇒&#10;dom(IAPPEND(l ↦ m)) = dom(APPEND(l ↦ m))"/>
+<org.eventb.core.axiom name="axm27" org.eventb.core.label="axm30" org.eventb.core.predicate="∀l,m·l ∈ ILIST ∧ m ∉ ran(l)&#10;⇒&#10;IAPPEND(l ↦ m) = APPEND(l ↦ m)"/>
+<org.eventb.core.axiom name="axm28" org.eventb.core.label="axm31" org.eventb.core.predicate="∀l,m·l ∈ LIST ∧ m ∈ MEMBER&#10;⇒&#10;card(APPEND(l ↦ m)) = card(l)+1" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="axm29" org.eventb.core.label="axm32" org.eventb.core.predicate="DEQUEUE ∈ LIST → LIST"/>
+<org.eventb.core.axiom name="axm30" org.eventb.core.label="axm33" org.eventb.core.predicate="dom(DEQUEUE) = LIST" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="axm31" org.eventb.core.label="axm34" org.eventb.core.predicate="∀l·l ∈ LIST ∧ l ≠ ∅&#10;⇒&#10;dom(DEQUEUE(l)) = 1‥card(l)−1"/>
+<org.eventb.core.axiom name="axm32" org.eventb.core.label="axm35" org.eventb.core.predicate="∀l,i·l ∈ LIST ∧ l ≠ ∅ ∧ i ∈ 1‥card(l)−1&#10;⇒&#10;DEQUEUE(l)(i) = l(i+1)"/>
+<org.eventb.core.axiom name="axm33" org.eventb.core.label="axm36" org.eventb.core.predicate="∀l·l ∈ ILIST ∧ l ≠ ∅&#10;⇒&#10;DEQUEUE(l) ∈ ILIST" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="axm34" org.eventb.core.label="axm37" org.eventb.core.predicate="∀l·l ∈ LIST ∧ l ≠ ∅&#10;⇒&#10;ran(DEQUEUE(l)) = ran(l) ∖ {l(1)}" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="axm35" org.eventb.core.label="axm38" org.eventb.core.predicate="DELETE ∈ (LIST × (1‥LENGTH)) ⇸ LIST"/>
+<org.eventb.core.axiom name="axm36" org.eventb.core.label="axm39" org.eventb.core.predicate="dom(DELETE) ⊆ LIST×(1‥LENGTH)" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="axm37" org.eventb.core.label="axm40" org.eventb.core.predicate="∀l,i·l ∈ LIST ∧ i ∈ dom(l)&#10;⇒&#10;l ↦ i ∈ dom(DELETE)"/>
+<org.eventb.core.axiom name="axm38" org.eventb.core.label="axm41" org.eventb.core.predicate="∀l,i·l ∈ LIST ∧ i ∈ dom(l)&#10;⇒&#10;dom(DELETE(l ↦ i)) = 1‥card(l)−1"/>
+<org.eventb.core.axiom name="axm39" org.eventb.core.label="axm42" org.eventb.core.predicate="∀l,i,j·l ∈ LIST ∧ i ∈ dom(l) ∧ j ∈ 1‥card(l)−1&#10;⇒&#10;j ∈ dom(DELETE(l ↦ i))" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="axm40" org.eventb.core.label="axm43" org.eventb.core.predicate="∀l,i,j·l ∈ LIST ∧ i ∈ dom(l) ∧ j ∈ 1‥i−1&#10;⇒&#10;DELETE(l ↦ i)(j) = l(j)"/>
+<org.eventb.core.axiom name="axm41" org.eventb.core.label="axm44" org.eventb.core.predicate="∀l,i,j·l ∈ LIST ∧ i ∈ dom(l) ∧ j ∈ i‥card(l)−1&#10;⇒&#10;DELETE(l ↦ i)(j) = l(j+1)"/>
+<org.eventb.core.axiom name="axm42" org.eventb.core.label="axm45" org.eventb.core.predicate="∀l,i·l ∈ LIST ∧ i ∈ dom(l)&#10;⇒&#10;card(DELETE(l ↦ i)) = card(l)−1" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="axm43" org.eventb.core.label="axm46" org.eventb.core.predicate="∀l,i·l ∈ LIST ∧ i ∈ dom(l)&#10;⇒&#10;ran(DELETE(l ↦ i)) = ran(l) ∖ {l(i)}" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="axm44" org.eventb.core.label="axm47" org.eventb.core.predicate="∀l,i·l ∈ LIST ∧ i ∈ dom(l)&#10;⇒&#10;card(DELETE(l ↦ i)) = card(l) − 1" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="axm45" org.eventb.core.label="axm48" org.eventb.core.predicate="IDELETE ∈ (ILIST×MEMBER) ⇸ ILIST"/>
+<org.eventb.core.axiom name="axm46" org.eventb.core.label="axm49" org.eventb.core.predicate="dom(IDELETE) = ILIST×MEMBER"/>
+<org.eventb.core.axiom name="axm47" org.eventb.core.label="axm50" org.eventb.core.predicate="∀l,m·l ∈ ILIST ∧ m ∈ MEMBER ∧ m ∈ ran(l)&#10;⇒&#10;l ↦ m ∈ dom(IDELETE)"/>
+<org.eventb.core.axiom name="axm49" org.eventb.core.label="axm51" org.eventb.core.predicate="∀l,m·l ∈ ILIST ∧ m ∈ ran(l)&#10;⇒&#10;dom(IDELETE(l ↦ m)) = 1‥card(l)−1"/>
+<org.eventb.core.axiom name="axm48" org.eventb.core.label="axm52" org.eventb.core.predicate="∀l,m·l ∈ ILIST ∧ m ∈ ran(l)&#10;⇒&#10;IDELETE(l ↦ m) = DELETE(l ↦ l∼(m))"/>
+<org.eventb.core.axiom name="axm50" org.eventb.core.label="axm53" org.eventb.core.predicate="∀l,m·l ∈ ILIST ∧ m ∈ ran(l)&#10;⇒&#10;card(IDELETE(l ↦ m)) = card(l)−1"/>
+<org.eventb.core.axiom name="axm51" org.eventb.core.label="axm54" org.eventb.core.predicate="∀l,m·l ∈ ILIST ∧ m ∈ ran(l)&#10;⇒&#10;ran(IDELETE(l ↦ m)) = ran(l) ∖ {m}" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="axm52" org.eventb.core.label="axm55" org.eventb.core.predicate="∀l·l ∈ LIST ∧ l ≠ ∅&#10;⇒&#10;DEQUEUE(l) = DELETE(l ↦ 1)" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="axm53" org.eventb.core.label="axm56" org.eventb.core.predicate="∀l·l ∈ LIST ∧ l ≠ ∅&#10;⇒&#10;card(DEQUEUE(l)) = card(l)−1" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="axm54" org.eventb.core.label="axm57" org.eventb.core.predicate="∀l,i·l ∈ ILIST ∧ i ∈ dom(l)&#10;⇒&#10;DEQUEUE(l) ∈ ILIST" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="axm55" org.eventb.core.label="axm58" org.eventb.core.predicate="∀l,i·l ∈ ILIST ∧ i ∈ dom(l)&#10;⇒&#10;DELETE(l ↦ i) ∈ ILIST" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="axm56" org.eventb.core.label="axm59" org.eventb.core.predicate="∀l,m·l ∈ LIST ∧ m ∈ MEMBER&#10;⇒&#10;DELETE(APPEND(l ↦ m) ↦ card(l)+1) = l" org.eventb.core.theorem="true"/>
+</org.eventb.core.contextFile>

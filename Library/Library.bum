@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="internal_act1" org.eventb.core.assignment="books ≔ ∅" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="internal_act2" org.eventb.core.assignment="members ≔ ∅" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="act1" org.eventb.core.assignment="borrowed ≔ ∅" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt2" org.eventb.core.comment="Add a new member of the library" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="NewMember">
+<org.eventb.core.action name="internal_act1" org.eventb.core.assignment="members ≔ members ∪ {member}" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="internal_grd1" org.eventb.core.label="grd1" org.eventb.core.predicate="member ∈ MEMBER ∖ members"/>
+<org.eventb.core.parameter name="internal_prm1" org.eventb.core.identifier="member"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt3" org.eventb.core.comment="Add a book to the library" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AddBook">
+<org.eventb.core.action name="internal_act1" org.eventb.core.assignment="books ≔ books ∪ {book}" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="internal_grd1" org.eventb.core.label="grd1" org.eventb.core.predicate="book ∈ BOOK ∖ books"/>
+<org.eventb.core.parameter name="internal_prm1" org.eventb.core.identifier="book"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt4" org.eventb.core.comment="A member borrows a book" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Borrrow">
+<org.eventb.core.action name="internal_act1" org.eventb.core.assignment="borrowed(book) ≔ member" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="internal_grd1" org.eventb.core.label="grd1" org.eventb.core.predicate="book ∈ books"/>
+<org.eventb.core.guard name="internal_grd2" org.eventb.core.label="grd2" org.eventb.core.predicate="member ∈ members"/>
+<org.eventb.core.guard name="internal_grd3" org.eventb.core.label="grd3" org.eventb.core.predicate="book ∉ dom(borrowed)"/>
+<org.eventb.core.parameter name="internal_prm1" org.eventb.core.identifier="book"/>
+<org.eventb.core.parameter name="internal_prm2" org.eventb.core.identifier="member"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt5" org.eventb.core.comment="A member returns a book" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Return">
+<org.eventb.core.action name="internal_act1" org.eventb.core.assignment="borrowed ≔ {book} ⩤ borrowed" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="internal_grd1" org.eventb.core.label="grd1" org.eventb.core.predicate="book ∈ dom(borrowed)"/>
+<org.eventb.core.parameter name="internal_prm1" org.eventb.core.identifier="book"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="inv1I" org.eventb.core.label="inv1" org.eventb.core.predicate="books ⊆ BOOK"/>
+<org.eventb.core.invariant name="inv2I" org.eventb.core.label="inv2" org.eventb.core.predicate="members ⊆ MEMBER"/>
+<org.eventb.core.seesContext name="element1" org.eventb.core.target="Library_ctx"/>
+<org.eventb.core.variable name="set1" org.eventb.core.comment="books contained in the library" org.eventb.core.identifier="books"/>
+<org.eventb.core.variable name="set2" org.eventb.core.comment="members of the library" org.eventb.core.identifier="members"/>
+<org.eventb.core.variable name="var1" org.eventb.core.comment="books borrowed by each member" org.eventb.core.identifier="borrowed"/>
+<org.eventb.core.invariant name="inv1" org.eventb.core.label="inv3" org.eventb.core.predicate="borrowed ∈ books ⇸ members"/>
+</org.eventb.core.machineFile>

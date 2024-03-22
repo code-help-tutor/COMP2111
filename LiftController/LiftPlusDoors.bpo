@@ -1,0 +1,838 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="DIRECTION" org.eventb.core.type="ℙ(DIRECTION)"/>
+<org.eventb.core.poIdentifier name="LIFT" org.eventb.core.type="ℙ(LIFT)"/>
+<org.eventb.core.poIdentifier name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.poIdentifier name="CHANGE" org.eventb.core.type="ℙ(DIRECTION×DIRECTION)"/>
+<org.eventb.core.poIdentifier name="DOWN" org.eventb.core.type="DIRECTION"/>
+<org.eventb.core.poIdentifier name="FLOOR" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="IDLE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.poIdentifier name="MAXFLOOR" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="MOVING" org.eventb.core.type="STATUS"/>
+<org.eventb.core.poIdentifier name="STOPPED" org.eventb.core.type="STATUS"/>
+<org.eventb.core.poIdentifier name="UP" org.eventb.core.type="DIRECTION"/>
+<org.eventb.core.poPredicate name="DIRECTIOO" org.eventb.core.predicate="MAXFLOOR∈ℕ1" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm1"/>
+<org.eventb.core.poPredicate name="DIRECTIOP" org.eventb.core.predicate="MAXFLOOR≥2" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#_RAc1wWe8Ed-6O_y_i4NrrV"/>
+<org.eventb.core.poPredicate name="DIRECTIOQ" org.eventb.core.predicate="FLOOR=0 ‥ MAXFLOOR" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm2"/>
+<org.eventb.core.poPredicate name="DIRECTIOR" org.eventb.core.predicate="finite(LIFT)" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm3"/>
+<org.eventb.core.poPredicate name="DIRECTIOS" org.eventb.core.predicate="partition(DIRECTION,{UP},{DOWN})" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm4"/>
+<org.eventb.core.poPredicate name="DIRECTIOT" org.eventb.core.predicate="partition(STATUS,{IDLE},{STOPPED},{MOVING})" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm5"/>
+<org.eventb.core.poPredicate name="DIRECTIOU" org.eventb.core.predicate="CHANGE∈DIRECTION ⤖ DIRECTION" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm6"/>
+<org.eventb.core.poPredicate name="DIRECTIOV" org.eventb.core.predicate="CHANGE={UP ↦ DOWN,DOWN ↦ UP}" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm7"/>
+<org.eventb.core.poPredicate name="DIRECTIOW" org.eventb.core.predicate="FLOOR≠(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm9"/>
+<org.eventb.core.poPredicate name="DIRECTIOX" org.eventb.core.predicate="finite(FLOOR)" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm10"/>
+<org.eventb.core.poPredicate name="DIRECTIOY" org.eventb.core.predicate="finite(STATUS)" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm11"/>
+<org.eventb.core.poPredicate name="DIRECTIOZ" org.eventb.core.predicate="finite(DIRECTION)" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm12"/>
+<org.eventb.core.poPredicate name="DIRECTIO[" org.eventb.core.predicate="finite(CHANGE)" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm13"/>
+<org.eventb.core.poIdentifier name="DOOR" org.eventb.core.type="ℙ(DOOR)"/>
+<org.eventb.core.poIdentifier name="CLOSED" org.eventb.core.type="DOOR"/>
+<org.eventb.core.poIdentifier name="OPEN" org.eventb.core.type="DOOR"/>
+<org.eventb.core.poPredicate name="DIRECTIO\" org.eventb.core.predicate="partition(DOOR,{OPEN},{CLOSED})" org.eventb.core.source="/LiftController/Door_ctx.buc|org.eventb.core.contextFile#Door_ctx|org.eventb.core.axiom#axm1"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="floordoorstatus" org.eventb.core.type="ℙ(LIFT×ℙ(ℤ×DOOR))"/>
+<org.eventb.core.poIdentifier name="liftdirection" org.eventb.core.type="ℙ(LIFT×DIRECTION)"/>
+<org.eventb.core.poIdentifier name="liftdoorstatus" org.eventb.core.type="ℙ(LIFT×DOOR)"/>
+<org.eventb.core.poIdentifier name="liftposition" org.eventb.core.type="ℙ(LIFT×ℤ)"/>
+<org.eventb.core.poIdentifier name="liftstatus" org.eventb.core.type="ℙ(LIFT×STATUS)"/>
+<org.eventb.core.poIdentifier name="waiting" org.eventb.core.type="ℙ(LIFT)"/>
+<org.eventb.core.poPredicate name="floordoorstatut" org.eventb.core.predicate="liftposition∈LIFT → FLOOR" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv1"/>
+<org.eventb.core.poPredicate name="floordoorstatuu" org.eventb.core.predicate="finite(liftposition)" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv2"/>
+<org.eventb.core.poPredicate name="floordoorstatuv" org.eventb.core.predicate="liftstatus∈LIFT → STATUS" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv3"/>
+<org.eventb.core.poPredicate name="floordoorstatuw" org.eventb.core.predicate="finite(liftstatus)" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv4"/>
+<org.eventb.core.poPredicate name="floordoorstatux" org.eventb.core.predicate="liftdirection∈LIFT → DIRECTION" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv5"/>
+<org.eventb.core.poPredicate name="floordoorstatuy" org.eventb.core.predicate="finite(liftdirection)" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv6"/>
+<org.eventb.core.poPredicate name="floordoorstatuz" org.eventb.core.predicate="∀l⦂LIFT·l∈LIFT∧liftposition(l)=0⇒liftdirection(l)=UP" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv7"/>
+<org.eventb.core.poPredicate name="floordoorstatu{" org.eventb.core.predicate="∀l⦂LIFT·l∈LIFT∧liftposition(l)=MAXFLOOR⇒liftdirection(l)=DOWN" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv8"/>
+<org.eventb.core.poPredicate name="floordoorstatu|" org.eventb.core.predicate="∀l⦂LIFT·l∈LIFT∧liftdirection(l)=DOWN⇒liftposition(l)≠0" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv9"/>
+<org.eventb.core.poPredicate name="floordoorstatu}" org.eventb.core.predicate="∀l⦂LIFT·l∈LIFT∧liftdirection(l)=UP⇒liftposition(l)≠MAXFLOOR" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv10"/>
+<org.eventb.core.poPredicate name="floordoorstatu~" org.eventb.core.predicate="∀l⦂LIFT·l∈LIFT∧liftdirection(l)=UP⇒liftposition(l)+1≤MAXFLOOR" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv11"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="inv3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu-"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT,f⦂ℤ·(f∈FLOOR⇒l∈dom(liftposition)∧liftposition∈LIFT ⇸ ℤ)∧(f∈FLOOR∧f≠liftposition(l)⇒l∈dom(floordoorstatus)∧floordoorstatus∈LIFT ⇸ ℙ(ℤ × DOOR)∧f∈dom(floordoorstatus(l))∧floordoorstatus(l)∈ℤ ⇸ DOOR)" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv4"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu-"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="inv4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu."/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·l∈dom(liftstatus)∧liftstatus∈LIFT ⇸ STATUS∧(liftstatus(l)∈{MOVING,IDLE}⇒l∈dom(liftdoorstatus)∧liftdoorstatus∈LIFT ⇸ DOOR)" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#element7"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#element7"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu."/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="inv5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu\/"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT,f⦂ℤ·l∈dom(liftstatus)∧liftstatus∈LIFT ⇸ STATUS∧(liftstatus(l)∈{MOVING,IDLE}∧f∈FLOOR⇒l∈dom(floordoorstatus)∧floordoorstatus∈LIFT ⇸ ℙ(ℤ × DOOR)∧f∈dom(floordoorstatus(l))∧floordoorstatus(l)∈ℤ ⇸ DOOR)" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv8"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv8"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu\/"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="thm1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu0"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT,f⦂ℤ·(f∈FLOOR⇒l∈dom(floordoorstatus)∧floordoorstatus∈LIFT ⇸ ℙ(ℤ × DOOR)∧f∈dom(floordoorstatus(l))∧floordoorstatus(l)∈ℤ ⇸ DOOR)∧(f∈FLOOR∧floordoorstatus(l)(f)=OPEN⇒l∈dom(liftposition)∧liftposition∈LIFT ⇸ ℤ)" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#element5"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#element5"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="thm1/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu0"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT,f⦂ℤ·f∈FLOOR∧floordoorstatus(l)(f)=OPEN⇒f=liftposition(l)" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#element5"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#element5"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="thm2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu1"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·l∈dom(liftdoorstatus)∧liftdoorstatus∈LIFT ⇸ DOOR∧(liftdoorstatus(l)=OPEN⇒l∈dom(liftstatus)∧liftstatus∈LIFT ⇸ STATUS)" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#element6"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#element6"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="thm2/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu1"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·liftdoorstatus(l)=OPEN⇒liftstatus(l)=STOPPED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#element6"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#element6"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="thm3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu2"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·l∈dom(floordoorstatus)∧floordoorstatus∈LIFT ⇸ ℙ(ℤ × DOOR)∧l∈dom(liftposition)∧liftposition∈LIFT ⇸ ℤ∧liftposition(l)∈dom(floordoorstatus(l))∧floordoorstatus(l)∈ℤ ⇸ DOOR∧(floordoorstatus(l)(liftposition(l))=OPEN⇒l∈dom(liftstatus)∧liftstatus∈LIFT ⇸ STATUS)" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#element4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#element4"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="thm3/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu2"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·floordoorstatus(l)(liftposition(l))=OPEN⇒liftstatus(l)=STOPPED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#element4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#element4"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="inv7/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu4"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·l∈waiting⇒l∈dom(floordoorstatus)∧floordoorstatus∈LIFT ⇸ ℙ(ℤ × DOOR)∧l∈dom(liftposition)∧liftposition∈LIFT ⇸ ℤ∧liftposition(l)∈dom(floordoorstatus(l))∧floordoorstatus(l)∈ℤ ⇸ DOOR∧(floordoorstatus(l)(liftposition(l))=OPEN⇒l∈dom(liftdoorstatus)∧liftdoorstatus∈LIFT ⇸ DOOR)" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv11"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv11"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatut"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="LIFT × {FLOOR × {CLOSED}}∈LIFT → (FLOOR → DOOR)" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt12"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv1"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu-|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatut"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="LIFT × {CLOSED}∈LIFT → DOOR" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv6"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt12"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv6"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu-|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatut"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT,f⦂ℤ·f∈FLOOR∧f≠(LIFT × {0})(l)⇒(LIFT × {FLOOR × {CLOSED}})(l)(f)=CLOSED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt12"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv4"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu.|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatut"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·(LIFT × {IDLE})(l)∈{MOVING,IDLE}⇒(LIFT × {CLOSED})(l)=CLOSED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#element7"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt12"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#element7"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#INITIALISATION\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu\/|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatut"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT,f⦂ℤ·(LIFT × {IDLE})(l)∈{MOVING,IDLE}∧f∈FLOOR⇒(LIFT × {FLOOR × {CLOSED}})(l)(f)=CLOSED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv8"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt12"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv8"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#INITIALISATION\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu0|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatut"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·l∈(∅ ⦂ ℙ(LIFT))⇒(LIFT × {FLOOR × {CLOSED}})(l)((LIFT × {0})(l))=OPEN∧(LIFT × {CLOSED})(l)=OPEN" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv11"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt12"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv11"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#INITIALISATION\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD9"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTfloordoorstatut" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="liftdoorstatus'" org.eventb.core.type="ℙ(LIFT×DOOR)"/>
+<org.eventb.core.poIdentifier name="waiting'" org.eventb.core.type="ℙ(LIFT)"/>
+<org.eventb.core.poIdentifier name="liftposition'" org.eventb.core.type="ℙ(LIFT×ℤ)"/>
+<org.eventb.core.poIdentifier name="liftstatus'" org.eventb.core.type="ℙ(LIFT×STATUS)"/>
+<org.eventb.core.poIdentifier name="floordoorstatus'" org.eventb.core.type="ℙ(LIFT×ℙ(ℤ×DOOR))"/>
+<org.eventb.core.poIdentifier name="liftdirection'" org.eventb.core.type="ℙ(LIFT×DIRECTION)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPfloordoorstatut" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTIDENTfloordoorstatut" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poSequent name="OpenFloorDoor/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTIDENTfloordoorstatuu"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(liftstatus)∧liftstatus∈LIFT ⇸ STATUS" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt2|org.eventb.core.guard#internal_element5"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt2|org.eventb.core.guard#internal_element5"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTIDENTfloordoorstatuu"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="OpenFloorDoor/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTHYPfloordoorstatuu'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(floordoorstatus)∧floordoorstatus∈LIFT ⇸ ℙ(ℤ × DOOR)∧lift∈dom(liftposition)∧liftposition∈LIFT ⇸ ℤ∧liftposition(lift)∈dom(floordoorstatus(lift))∧floordoorstatus(lift)∈ℤ ⇸ DOOR" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt2|org.eventb.core.guard#internal_element4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt2|org.eventb.core.guard#internal_element4"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTHYPfloordoorstatuu'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="OpenFloorDoor/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTHYPfloordoorstatuu("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(liftdoorstatus)∧liftdoorstatus∈LIFT ⇸ DOOR" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt2|org.eventb.core.guard#internal_element6"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt2|org.eventb.core.guard#internal_element6"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTHYPfloordoorstatuu("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="OpenFloorDoor/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatuu"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="floordoorstatus{lift ↦ floordoorstatus(lift){liftposition(lift) ↦ OPEN}}∈LIFT → (FLOOR → DOOR)" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt2"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv1"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#OpenFloorDoor\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu-|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="OpenFloorDoor/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatuu"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT,f⦂ℤ·f∈FLOOR∧f≠liftposition(l)⇒(floordoorstatus{lift ↦ floordoorstatus(lift){liftposition(lift) ↦ OPEN}})(l)(f)=CLOSED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt2"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv4"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#OpenFloorDoor\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu.|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="OpenFloorDoor/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatuu"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT,f⦂ℤ·liftstatus(l)∈{MOVING,IDLE}∧f∈FLOOR⇒(floordoorstatus{lift ↦ floordoorstatus(lift){liftposition(lift) ↦ OPEN}})(l)(f)=CLOSED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv8"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt2"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv8"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#OpenFloorDoor\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu0|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="OpenFloorDoor/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatuu"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·l∈waiting⇒(floordoorstatus{lift ↦ floordoorstatus(lift){liftposition(lift) ↦ OPEN}})(l)(liftposition(l))=OPEN∧liftdoorstatus(l)=OPEN" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv11"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt2"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv11"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#OpenFloorDoor\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD9"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="OpenFloorDoor/act1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatuu"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(floordoorstatus)∧floordoorstatus∈LIFT ⇸ ℙ(ℤ × DOOR)∧lift∈dom(liftposition)∧liftposition∈LIFT ⇸ ℤ" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt2|org.eventb.core.action#internal_element1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt2|org.eventb.core.action#internal_element1"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatuu"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTfloordoorstatuu" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="lift" org.eventb.core.type="LIFT"/>
+<org.eventb.core.poIdentifier name="floordoorstatus'" org.eventb.core.type="ℙ(LIFT×ℙ(ℤ×DOOR))"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPfloordoorstatuu'" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTIDENTfloordoorstatuu" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="liftstatus(lift)=STOPPED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt2|org.eventb.core.guard#internal_element5"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPfloordoorstatuu(" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTHYPfloordoorstatuu'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="floordoorstatus(lift)(liftposition(lift))=CLOSED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt2|org.eventb.core.guard#internal_element4"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPfloordoorstatuu" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTHYPfloordoorstatuu(" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="liftdoorstatus(lift)=CLOSED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt2|org.eventb.core.guard#internal_element6"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="OpenLiftDoor/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTIDENTfloordoorstatuv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(liftstatus)∧liftstatus∈LIFT ⇸ STATUS" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt13|org.eventb.core.guard#("/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt13|org.eventb.core.guard#("/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTIDENTfloordoorstatuv"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="OpenLiftDoor/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTHYPfloordoorstatuv'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(floordoorstatus)∧floordoorstatus∈LIFT ⇸ ℙ(ℤ × DOOR)∧lift∈dom(liftposition)∧liftposition∈LIFT ⇸ ℤ∧liftposition(lift)∈dom(floordoorstatus(lift))∧floordoorstatus(lift)∈ℤ ⇸ DOOR" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt13|org.eventb.core.guard#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt13|org.eventb.core.guard#*"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTHYPfloordoorstatuv'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="OpenLiftDoor/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTHYPfloordoorstatuv("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(liftdoorstatus)∧liftdoorstatus∈LIFT ⇸ DOOR" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt13|org.eventb.core.guard#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt13|org.eventb.core.guard#)"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTHYPfloordoorstatuv("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="OpenLiftDoor/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatuv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="liftdoorstatus{lift ↦ OPEN}∈LIFT → DOOR" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv6"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt13"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv6"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#OpenLiftDoor\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu-|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="OpenLiftDoor/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatuv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·liftstatus(l)∈{MOVING,IDLE}⇒(liftdoorstatus{lift ↦ OPEN})(l)=CLOSED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#element7"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt13"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#element7"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#OpenLiftDoor\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu\/|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="OpenLiftDoor/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatuv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·l∈waiting∪{lift}⇒floordoorstatus(l)(liftposition(l))=OPEN∧(liftdoorstatus{lift ↦ OPEN})(l)=OPEN" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv11"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt13"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv11"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#OpenLiftDoor\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD9"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTfloordoorstatuv" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="liftdoorstatus'" org.eventb.core.type="ℙ(LIFT×DOOR)"/>
+<org.eventb.core.poIdentifier name="waiting'" org.eventb.core.type="ℙ(LIFT)"/>
+<org.eventb.core.poIdentifier name="lift" org.eventb.core.type="LIFT"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPfloordoorstatuv'" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTIDENTfloordoorstatuv" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="liftstatus(lift)=STOPPED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt13|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPfloordoorstatuv(" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTHYPfloordoorstatuv'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="floordoorstatus(lift)(liftposition(lift))=OPEN" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt13|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPfloordoorstatuv" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTHYPfloordoorstatuv(" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="liftdoorstatus(lift)=CLOSED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt13|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="CloseFloorDoor/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTIDENTfloordoorstatuw"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(liftstatus)∧liftstatus∈LIFT ⇸ STATUS" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt3|org.eventb.core.guard#_NnbnsGgNEd-PJ5mIZxsdaz"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt3|org.eventb.core.guard#_NnbnsGgNEd-PJ5mIZxsdaz"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTIDENTfloordoorstatuw"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="CloseFloorDoor/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTHYPfloordoorstatuw'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(floordoorstatus)∧floordoorstatus∈LIFT ⇸ ℙ(ℤ × DOOR)∧lift∈dom(liftposition)∧liftposition∈LIFT ⇸ ℤ∧liftposition(lift)∈dom(floordoorstatus(lift))∧floordoorstatus(lift)∈ℤ ⇸ DOOR" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt3|org.eventb.core.guard#_NnbnsGgNEd-PJ5mIZxsday"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt3|org.eventb.core.guard#_NnbnsGgNEd-PJ5mIZxsday"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTHYPfloordoorstatuw'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="CloseFloorDoor/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTHYPfloordoorstatuw("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(liftdoorstatus)∧liftdoorstatus∈LIFT ⇸ DOOR" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt3|org.eventb.core.guard#_NnbnsGgNEd-PJ5mIZxsdaw"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt3|org.eventb.core.guard#_NnbnsGgNEd-PJ5mIZxsdaw"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTHYPfloordoorstatuw("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="CloseFloorDoor/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatuw"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="floordoorstatus{lift ↦ floordoorstatus(lift){liftposition(lift) ↦ CLOSED}}∈LIFT → (FLOOR → DOOR)" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt3"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv1"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#CloseFloorDoor\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu-|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="CloseFloorDoor/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatuw"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT,f⦂ℤ·f∈FLOOR∧f≠liftposition(l)⇒(floordoorstatus{lift ↦ floordoorstatus(lift){liftposition(lift) ↦ CLOSED}})(l)(f)=CLOSED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt3"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv4"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#CloseFloorDoor\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu.|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="CloseFloorDoor/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatuw"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT,f⦂ℤ·liftstatus(l)∈{MOVING,IDLE}∧f∈FLOOR⇒(floordoorstatus{lift ↦ floordoorstatus(lift){liftposition(lift) ↦ CLOSED}})(l)(f)=CLOSED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv8"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt3"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv8"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#CloseFloorDoor\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu0|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="CloseFloorDoor/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatuw"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·l∈waiting⇒(floordoorstatus{lift ↦ floordoorstatus(lift){liftposition(lift) ↦ CLOSED}})(l)(liftposition(l))=OPEN∧liftdoorstatus(l)=OPEN" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv11"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt3"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv11"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#CloseFloorDoor\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD9"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="CloseFloorDoor/act1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatuw"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(floordoorstatus)∧floordoorstatus∈LIFT ⇸ ℙ(ℤ × DOOR)∧lift∈dom(liftposition)∧liftposition∈LIFT ⇸ ℤ" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt3|org.eventb.core.action#internal_element1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt3|org.eventb.core.action#internal_element1"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatuw"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTfloordoorstatuw" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="lift" org.eventb.core.type="LIFT"/>
+<org.eventb.core.poIdentifier name="floordoorstatus'" org.eventb.core.type="ℙ(LIFT×ℙ(ℤ×DOOR))"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPfloordoorstatuw'" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTIDENTfloordoorstatuw" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="liftstatus(lift)=STOPPED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt3|org.eventb.core.guard#_NnbnsGgNEd-PJ5mIZxsdaz"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPfloordoorstatuw(" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTHYPfloordoorstatuw'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="floordoorstatus(lift)(liftposition(lift))=OPEN" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt3|org.eventb.core.guard#_NnbnsGgNEd-PJ5mIZxsday"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPfloordoorstatuw" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTHYPfloordoorstatuw(" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="liftdoorstatus(lift)=OPEN" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt3|org.eventb.core.guard#_NnbnsGgNEd-PJ5mIZxsdaw"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="lift∉waiting" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt3|org.eventb.core.guard#_NnbnsGgNEd-PJ5mIZxsda{"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="CloseLiftdoor/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTIDENTfloordoorstatux"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(liftstatus)∧liftstatus∈LIFT ⇸ STATUS" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt14|org.eventb.core.guard#_NnbnsmgNEd-PJ5mIZxsdb("/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt14|org.eventb.core.guard#_NnbnsmgNEd-PJ5mIZxsdb("/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTIDENTfloordoorstatux"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="CloseLiftdoor/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTHYPfloordoorstatux'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(floordoorstatus)∧floordoorstatus∈LIFT ⇸ ℙ(ℤ × DOOR)∧lift∈dom(liftposition)∧liftposition∈LIFT ⇸ ℤ∧liftposition(lift)∈dom(floordoorstatus(lift))∧floordoorstatus(lift)∈ℤ ⇸ DOOR" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt14|org.eventb.core.guard#_NnbnsmgNEd-PJ5mIZxsda}"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt14|org.eventb.core.guard#_NnbnsmgNEd-PJ5mIZxsda}"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTHYPfloordoorstatux'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="CloseLiftdoor/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTHYPfloordoorstatux("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(liftdoorstatus)∧liftdoorstatus∈LIFT ⇸ DOOR" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt14|org.eventb.core.guard#_NnbnsGgNEd-PJ5mIZxsdaw"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt14|org.eventb.core.guard#_NnbnsGgNEd-PJ5mIZxsdaw"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTHYPfloordoorstatux("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="CloseLiftdoor/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatux"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="liftdoorstatus{lift ↦ CLOSED}∈LIFT → DOOR" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv6"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt14"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv6"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#CloseLiftdoor\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu-|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="CloseLiftdoor/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatux"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·liftstatus(l)∈{MOVING,IDLE}⇒(liftdoorstatus{lift ↦ CLOSED})(l)=CLOSED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#element7"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt14"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#element7"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#CloseLiftdoor\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu\/|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="CloseLiftdoor/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatux"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·l∈waiting⇒floordoorstatus(l)(liftposition(l))=OPEN∧(liftdoorstatus{lift ↦ CLOSED})(l)=OPEN" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv11"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt14"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv11"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#CloseLiftdoor\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD9"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTfloordoorstatux" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="liftdoorstatus'" org.eventb.core.type="ℙ(LIFT×DOOR)"/>
+<org.eventb.core.poIdentifier name="lift" org.eventb.core.type="LIFT"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPfloordoorstatux'" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTIDENTfloordoorstatux" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="liftstatus(lift)=STOPPED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt14|org.eventb.core.guard#_NnbnsmgNEd-PJ5mIZxsdb("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPfloordoorstatux(" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTHYPfloordoorstatux'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="floordoorstatus(lift)(liftposition(lift))=CLOSED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt14|org.eventb.core.guard#_NnbnsmgNEd-PJ5mIZxsda}"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPfloordoorstatux" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTHYPfloordoorstatux(" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="liftdoorstatus(lift)=OPEN" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt14|org.eventb.core.guard#_NnbnsGgNEd-PJ5mIZxsdaw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="Release/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatuy"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·l∈waiting ∖ {lift}⇒floordoorstatus(l)(liftposition(l))=OPEN∧liftdoorstatus(l)=OPEN" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv11"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt15"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv11"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#Release\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD9"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTfloordoorstatuy" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="waiting'" org.eventb.core.type="ℙ(LIFT)"/>
+<org.eventb.core.poIdentifier name="lift" org.eventb.core.type="LIFT"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPfloordoorstatuy" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTIDENTfloordoorstatuy" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="lift∈waiting" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt15|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="MoveUp/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatuz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT,f⦂ℤ·f∈FLOOR∧f≠(liftposition{lift ↦ liftposition(lift)+1})(l)⇒floordoorstatus(l)(f)=CLOSED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt10"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt8"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv4"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#MoveUp\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu.|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MoveUp/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatuz">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="liftstatus'∈LIFT → STATUS∧liftstatus'=liftstatus{lift ↦ MOVING}" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt8|org.eventb.core.action#internal_element4"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·liftstatus'(l)∈{MOVING,IDLE}⇒liftdoorstatus(l)=CLOSED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#element7"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt10"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt8"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#element7"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#MoveUp\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu\/|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MoveUp/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatuz">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="liftstatus'∈LIFT → STATUS∧liftstatus'=liftstatus{lift ↦ MOVING}" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt8|org.eventb.core.action#internal_element4"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT,f⦂ℤ·liftstatus'(l)∈{MOVING,IDLE}∧f∈FLOOR⇒floordoorstatus(l)(f)=CLOSED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv8"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt10"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt8"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv8"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#MoveUp\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu0|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MoveUp/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatuz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·l∈waiting⇒floordoorstatus(l)((liftposition{lift ↦ liftposition(lift)+1})(l))=OPEN∧liftdoorstatus(l)=OPEN" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv11"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt10"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt8"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv11"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#MoveUp\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD9"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MoveUp/act3/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatuz">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="liftdirection'∈LIFT → DIRECTION∧(liftposition(lift)+1=MAXFLOOR⇒liftdirection'=liftdirection{lift ↦ DOWN})∧(liftposition(lift)+1≠MAXFLOOR⇒liftdirection'=liftdirection)" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt10|org.eventb.core.action#internal_element2"/>
+<org.eventb.core.poPredicate name="(" org.eventb.core.predicate="liftstatus'∈LIFT → STATUS∧(liftstatus'=liftstatus{lift ↦ MOVING}∨liftstatus'=liftstatus{lift ↦ STOPPED})" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt10|org.eventb.core.action#internal_element4"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∃liftstatus'⦂ℙ(LIFT×STATUS)·liftstatus'∈LIFT → STATUS∧liftstatus'=liftstatus{lift ↦ MOVING}" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt8|org.eventb.core.action#internal_element4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt8|org.eventb.core.action#internal_element4"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatuz"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MoveUp/act3/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatuz">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="liftstatus'∈LIFT → STATUS∧liftstatus'=liftstatus{lift ↦ MOVING}" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt8|org.eventb.core.action#internal_element4"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="liftstatus'∈LIFT → STATUS∧(liftstatus'=liftstatus{lift ↦ MOVING}∨liftstatus'=liftstatus{lift ↦ STOPPED})" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt10|org.eventb.core.action#internal_element4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt10"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt10|org.eventb.core.action#internal_element4"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt8"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#MoveUp\/act3\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTfloordoorstatuz" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="liftposition'" org.eventb.core.type="ℙ(LIFT×ℤ)"/>
+<org.eventb.core.poIdentifier name="lift" org.eventb.core.type="LIFT"/>
+<org.eventb.core.poIdentifier name="liftstatus'" org.eventb.core.type="ℙ(LIFT×STATUS)"/>
+<org.eventb.core.poIdentifier name="liftdirection'" org.eventb.core.type="ℙ(LIFT×DIRECTION)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPfloordoorstatuz" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTIDENTfloordoorstatuz" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="liftstatus(lift)=MOVING" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt8|org.eventb.core.guard#internal_element2"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="liftdirection(lift)=UP" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt8|org.eventb.core.guard#internal_element3"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="MoveUpAndStop/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatu{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT,f⦂ℤ·f∈FLOOR∧f≠(liftposition{lift ↦ liftposition(lift)+1})(l)⇒floordoorstatus(l)(f)=CLOSED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt10"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt9"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv4"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#MoveUpAndStop\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu.|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MoveUpAndStop/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatu{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·(liftstatus{lift ↦ STOPPED})(l)∈{MOVING,IDLE}⇒liftdoorstatus(l)=CLOSED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#element7"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt10"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt9"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#element7"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#MoveUpAndStop\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu\/|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MoveUpAndStop/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatu{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT,f⦂ℤ·(liftstatus{lift ↦ STOPPED})(l)∈{MOVING,IDLE}∧f∈FLOOR⇒floordoorstatus(l)(f)=CLOSED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv8"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt10"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt9"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv8"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#MoveUpAndStop\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu0|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MoveUpAndStop/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatu{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·l∈waiting⇒floordoorstatus(l)((liftposition{lift ↦ liftposition(lift)+1})(l))=OPEN∧liftdoorstatus(l)=OPEN" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv11"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt10"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt9"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv11"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#MoveUpAndStop\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD9"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MoveUpAndStop/act3/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatu{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="liftstatus{lift ↦ STOPPED}∈LIFT → STATUS∧(liftstatus{lift ↦ STOPPED}=liftstatus{lift ↦ MOVING}∨liftstatus{lift ↦ STOPPED}=liftstatus{lift ↦ STOPPED})" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt10|org.eventb.core.action#internal_element4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt10"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt10|org.eventb.core.action#internal_element4"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt9"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#MoveUpAndStop\/act3\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTfloordoorstatu{" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="liftposition'" org.eventb.core.type="ℙ(LIFT×ℤ)"/>
+<org.eventb.core.poIdentifier name="lift" org.eventb.core.type="LIFT"/>
+<org.eventb.core.poIdentifier name="liftstatus'" org.eventb.core.type="ℙ(LIFT×STATUS)"/>
+<org.eventb.core.poIdentifier name="liftdirection'" org.eventb.core.type="ℙ(LIFT×DIRECTION)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPfloordoorstatu{" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTIDENTfloordoorstatu{" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="liftstatus(lift)=MOVING" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt9|org.eventb.core.guard#internal_element2"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="liftdirection(lift)=UP" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt9|org.eventb.core.guard#internal_element3"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="MoveDown/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatu\|"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT,f⦂ℤ·f∈FLOOR∧f≠(liftposition{lift ↦ liftposition(lift) − 1})(l)⇒floordoorstatus(l)(f)=CLOSED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt12"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt10"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv4"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#MoveDown\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu.|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MoveDown/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatu\|">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="liftstatus'∈LIFT → STATUS∧liftstatus'=liftstatus{lift ↦ MOVING}" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt10|org.eventb.core.action#internal_element4"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·liftstatus'(l)∈{MOVING,IDLE}⇒liftdoorstatus(l)=CLOSED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#element7"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt12"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt10"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#element7"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#MoveDown\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu\/|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MoveDown/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatu\|">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="liftstatus'∈LIFT → STATUS∧liftstatus'=liftstatus{lift ↦ MOVING}" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt10|org.eventb.core.action#internal_element4"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT,f⦂ℤ·liftstatus'(l)∈{MOVING,IDLE}∧f∈FLOOR⇒floordoorstatus(l)(f)=CLOSED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv8"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt12"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt10"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv8"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#MoveDown\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu0|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MoveDown/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatu\|"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·l∈waiting⇒floordoorstatus(l)((liftposition{lift ↦ liftposition(lift) − 1})(l))=OPEN∧liftdoorstatus(l)=OPEN" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv11"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt12"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt10"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv11"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#MoveDown\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD9"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MoveDown/act3/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatu\|">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="liftdirection'∈LIFT → DIRECTION∧(liftposition(lift)=1⇒liftdirection'=liftdirection{lift ↦ UP})∧(liftposition(lift)≠1⇒liftdirection'=liftdirection)" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt12|org.eventb.core.action#internal_element2"/>
+<org.eventb.core.poPredicate name="(" org.eventb.core.predicate="liftstatus'∈LIFT → STATUS∧(liftstatus'=liftstatus{lift ↦ MOVING}∨liftstatus'=liftstatus{lift ↦ STOPPED})" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt12|org.eventb.core.action#internal_element4"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∃liftstatus'⦂ℙ(LIFT×STATUS)·liftstatus'∈LIFT → STATUS∧liftstatus'=liftstatus{lift ↦ MOVING}" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt10|org.eventb.core.action#internal_element4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt10|org.eventb.core.action#internal_element4"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatu\|"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MoveDown/act3/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatu\|">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="liftstatus'∈LIFT → STATUS∧liftstatus'=liftstatus{lift ↦ MOVING}" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt10|org.eventb.core.action#internal_element4"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="liftstatus'∈LIFT → STATUS∧(liftstatus'=liftstatus{lift ↦ MOVING}∨liftstatus'=liftstatus{lift ↦ STOPPED})" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt12|org.eventb.core.action#internal_element4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt12"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt12|org.eventb.core.action#internal_element4"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt10"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#MoveDown\/act3\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTfloordoorstatu|" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="liftposition'" org.eventb.core.type="ℙ(LIFT×ℤ)"/>
+<org.eventb.core.poIdentifier name="lift" org.eventb.core.type="LIFT"/>
+<org.eventb.core.poIdentifier name="liftstatus'" org.eventb.core.type="ℙ(LIFT×STATUS)"/>
+<org.eventb.core.poIdentifier name="liftdirection'" org.eventb.core.type="ℙ(LIFT×DIRECTION)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPfloordoorstatu|" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTIDENTfloordoorstatu\|" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="liftstatus(lift)=MOVING" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt10|org.eventb.core.guard#internal_element2"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="liftdirection(lift)=DOWN" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt10|org.eventb.core.guard#internal_element3"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="MoveDownAndStop/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatu}"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT,f⦂ℤ·f∈FLOOR∧f≠(liftposition{lift ↦ liftposition(lift) − 1})(l)⇒floordoorstatus(l)(f)=CLOSED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt12"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt11"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv4"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#MoveDownAndStop\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu.|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MoveDownAndStop/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatu}"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·(liftstatus{lift ↦ STOPPED})(l)∈{MOVING,IDLE}⇒liftdoorstatus(l)=CLOSED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#element7"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt12"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt11"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#element7"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#MoveDownAndStop\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu\/|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MoveDownAndStop/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatu}"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT,f⦂ℤ·(liftstatus{lift ↦ STOPPED})(l)∈{MOVING,IDLE}∧f∈FLOOR⇒floordoorstatus(l)(f)=CLOSED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv8"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt12"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt11"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv8"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#MoveDownAndStop\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu0|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MoveDownAndStop/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatu}"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·l∈waiting⇒floordoorstatus(l)((liftposition{lift ↦ liftposition(lift) − 1})(l))=OPEN∧liftdoorstatus(l)=OPEN" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv11"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt12"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt11"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv11"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#MoveDownAndStop\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD9"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MoveDownAndStop/act3/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatu}"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="liftstatus{lift ↦ STOPPED}∈LIFT → STATUS∧(liftstatus{lift ↦ STOPPED}=liftstatus{lift ↦ MOVING}∨liftstatus{lift ↦ STOPPED}=liftstatus{lift ↦ STOPPED})" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt12|org.eventb.core.action#internal_element4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt12"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt12|org.eventb.core.action#internal_element4"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt11"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#MoveDownAndStop\/act3\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTfloordoorstatu}" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="liftposition'" org.eventb.core.type="ℙ(LIFT×ℤ)"/>
+<org.eventb.core.poIdentifier name="lift" org.eventb.core.type="LIFT"/>
+<org.eventb.core.poIdentifier name="liftstatus'" org.eventb.core.type="ℙ(LIFT×STATUS)"/>
+<org.eventb.core.poIdentifier name="liftdirection'" org.eventb.core.type="ℙ(LIFT×DIRECTION)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPfloordoorstatu}" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTIDENTfloordoorstatu}" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="liftstatus(lift)=MOVING" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt11|org.eventb.core.guard#internal_element2"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="liftdirection(lift)=DOWN" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt11|org.eventb.core.guard#internal_element3"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="StartLift/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTHYPfloordoorstatu~'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(liftdoorstatus)∧liftdoorstatus∈LIFT ⇸ DOOR" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt4|org.eventb.core.guard#_NncOwGgNEd-PJ5mIZxsdax"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt4|org.eventb.core.guard#_NncOwGgNEd-PJ5mIZxsdax"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTHYPfloordoorstatu~'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="StartLift/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTHYPfloordoorstatu~lifv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(floordoorstatus)∧floordoorstatus∈LIFT ⇸ ℙ(ℤ × DOOR)∧lift∈dom(liftposition)∧liftposition∈LIFT ⇸ ℤ∧liftposition(lift)∈dom(floordoorstatus(lift))∧floordoorstatus(lift)∈ℤ ⇸ DOOR" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt4|org.eventb.core.guard#_NncOwGgNEd-PJ5mIZxsday"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt4|org.eventb.core.guard#_NncOwGgNEd-PJ5mIZxsday"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTHYPfloordoorstatu~lifv"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="StartLift/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatu~"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·(liftstatus{lift ↦ MOVING})(l)∈{MOVING,IDLE}⇒liftdoorstatus(l)=CLOSED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#element7"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt7"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt4"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#element7"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#StartLift\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu\/|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="StartLift/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatu~"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT,f⦂ℤ·(liftstatus{lift ↦ MOVING})(l)∈{MOVING,IDLE}∧f∈FLOOR⇒floordoorstatus(l)(f)=CLOSED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv8"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt7"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt4"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv8"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#StartLift\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu0|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTfloordoorstatu~" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="lift" org.eventb.core.type="LIFT"/>
+<org.eventb.core.poIdentifier name="liftstatus'" org.eventb.core.type="ℙ(LIFT×STATUS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPfloordoorstatu~'" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTIDENTfloordoorstatu~" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="liftstatus(lift)=STOPPED" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt7|org.eventb.core.guard#internal_element1"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPfloordoorstatu~lifv" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTHYPfloordoorstatu~'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="liftdoorstatus(lift)=CLOSED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt4|org.eventb.core.guard#_NncOwGgNEd-PJ5mIZxsdax"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPfloordoorstatu~" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTHYPfloordoorstatu~lifv" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="floordoorstatus(lift)(liftposition(lift))=CLOSED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt4|org.eventb.core.guard#_NncOwGgNEd-PJ5mIZxsday"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="ChangeDir/act1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatv'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(liftdirection)∧liftdirection∈LIFT ⇸ DIRECTION∧liftdirection(lift)∈dom(CHANGE)∧CHANGE∈DIRECTION ⇸ DIRECTION" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt8|org.eventb.core.action#internal_element1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt8|org.eventb.core.action#internal_element1"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatv'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTfloordoorstatv'" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="lift" org.eventb.core.type="LIFT"/>
+<org.eventb.core.poIdentifier name="liftdirection'" org.eventb.core.type="ℙ(LIFT×DIRECTION)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPfloordoorstatv'" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTIDENTfloordoorstatv'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="liftstatus(lift)=STOPPED" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt8|org.eventb.core.guard#internal_element1"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="liftposition(lift)≠0" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt8|org.eventb.core.guard#internal_element3"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="liftposition(lift)≠MAXFLOOR" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt8|org.eventb.core.guard#internal_element4"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="IdleLift/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTHYPfloordoorstatv('"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(floordoorstatus)∧floordoorstatus∈LIFT ⇸ ℙ(ℤ × DOOR)∧lift∈dom(liftposition)∧liftposition∈LIFT ⇸ ℤ∧liftposition(lift)∈dom(floordoorstatus(lift))∧floordoorstatus(lift)∈ℤ ⇸ DOOR" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt6|org.eventb.core.guard#_NncOwmgNEd-PJ5mIZxsdax"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt6|org.eventb.core.guard#_NncOwmgNEd-PJ5mIZxsdax"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTHYPfloordoorstatv('"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="IdleLift/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTHYPfloordoorstatv(lifv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(liftdoorstatus)∧liftdoorstatus∈LIFT ⇸ DOOR" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt6|org.eventb.core.guard#_NncOwmgNEd-PJ5mIZxsday"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt6|org.eventb.core.guard#_NncOwmgNEd-PJ5mIZxsday"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTHYPfloordoorstatv(lifv"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="IdleLift/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatv("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·(liftstatus{lift ↦ IDLE})(l)∈{MOVING,IDLE}⇒liftdoorstatus(l)=CLOSED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#element7"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt5"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt6"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#element7"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#IdleLift\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu\/|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="IdleLift/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatv("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT,f⦂ℤ·(liftstatus{lift ↦ IDLE})(l)∈{MOVING,IDLE}∧f∈FLOOR⇒floordoorstatus(l)(f)=CLOSED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv8"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt5"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt6"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv8"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#IdleLift\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu0|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTfloordoorstatv(" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="lift" org.eventb.core.type="LIFT"/>
+<org.eventb.core.poIdentifier name="liftstatus'" org.eventb.core.type="ℙ(LIFT×STATUS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPfloordoorstatv('" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTIDENTfloordoorstatv(" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="liftstatus(lift)=STOPPED" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt5|org.eventb.core.guard#internal_grd2"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPfloordoorstatv(lifv" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTHYPfloordoorstatv('" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="floordoorstatus(lift)(liftposition(lift))=CLOSED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt6|org.eventb.core.guard#_NncOwmgNEd-PJ5mIZxsdax"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPfloordoorstatv(" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTHYPfloordoorstatv(lifv" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="liftdoorstatus(lift)=CLOSED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt6|org.eventb.core.guard#_NncOwmgNEd-PJ5mIZxsday"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="ActivateLift/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatv)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·(liftstatus{lift ↦ STOPPED})(l)∈{MOVING,IDLE}⇒liftdoorstatus(l)=CLOSED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#element7"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt6"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt7"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#element7"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#ActivateLift\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu\/|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ActivateLift/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTALLHYPfloordoorstatv)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT,f⦂ℤ·(liftstatus{lift ↦ STOPPED})(l)∈{MOVING,IDLE}∧f∈FLOOR⇒floordoorstatus(l)(f)=CLOSED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv8"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt6"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.event#evt7"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv8"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poSequent#ActivateLift\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu0|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTfloordoorstatv)" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="lift" org.eventb.core.type="LIFT"/>
+<org.eventb.core.poIdentifier name="liftstatus'" org.eventb.core.type="ℙ(LIFT×STATUS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPfloordoorstatv)" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#EVTIDENTfloordoorstatv)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="liftstatus(lift)=IDLE" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt6|org.eventb.core.guard#element2"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLift_cu-" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="floordoorstatus∈LIFT → (FLOOR → DOOR)" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv1"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="liftdoorstatus∈LIFT → DOOR" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv6"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLift_cu." org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu-" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="∀l⦂LIFT,f⦂ℤ·f∈FLOOR∧f≠liftposition(l)⇒floordoorstatus(l)(f)=CLOSED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv4"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLift_cu/" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu." org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="∀l⦂LIFT·liftstatus(l)∈{MOVING,IDLE}⇒liftdoorstatus(l)=CLOSED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#element7"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLift_cu0" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu\/" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="∀l⦂LIFT,f⦂ℤ·liftstatus(l)∈{MOVING,IDLE}∧f∈FLOOR⇒floordoorstatus(l)(f)=CLOSED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv8"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLift_cu1" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu0" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="∀l⦂LIFT,f⦂ℤ·f∈FLOOR∧floordoorstatus(l)(f)=OPEN⇒f=liftposition(l)" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#element5"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLift_cu2" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu1" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="∀l⦂LIFT·liftdoorstatus(l)=OPEN⇒liftstatus(l)=STOPPED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#element6"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLift_cu4" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu2" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="∀l⦂LIFT·floordoorstatus(l)(liftposition(l))=OPEN⇒liftstatus(l)=STOPPED" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#element4"/>
+<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="waiting⊆LIFT" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv10"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/LiftController/LiftPlusDoors.bpo|org.eventb.core.poFile#LiftPlusDoors|org.eventb.core.poPredicateSet#HYPLift_cu4" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="∀l⦂LIFT·l∈waiting⇒floordoorstatus(l)(liftposition(l))=OPEN∧liftdoorstatus(l)=OPEN" org.eventb.core.source="/LiftController/LiftPlusDoors.bum|org.eventb.core.machineFile#LiftPlusDoors|org.eventb.core.invariant#inv11"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

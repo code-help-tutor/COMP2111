@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.comment="" org.eventb.core.configuration="org.eventb.core.fwd;org.animb.valuation.valBase" version="3">
+<org.eventb.core.carrierSet name="'" org.eventb.core.comment="" org.eventb.core.identifier="COIN"/>
+<org.eventb.core.axiom name="1" org.eventb.core.label="axm1" org.eventb.core.predicate="finite(COIN)"/>
+<org.eventb.core.axiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="CoinValue ∈ COIN ↣ ℕ1"/>
+<org.eventb.core.constant name=")" org.eventb.core.comment="" org.eventb.core.identifier="CoinValue"/>
+<org.animb.valuation.value name="-" org.eventb.core.expression="{One,Two,Five}" org.eventb.core.identifier="COIN"/>
+<org.animb.valuation.value name="." org.eventb.core.expression="{One ↦ 1,Two ↦ 2,Five ↦ 5}" org.eventb.core.identifier="CoinValue"/>
+</org.eventb.core.contextFile>

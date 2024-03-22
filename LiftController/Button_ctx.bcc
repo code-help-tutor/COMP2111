@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd;org.animb.valuation.valBase">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(BUTTON,{ON},{OFF})" org.eventb.core.source="/LiftController/Button_ctx.buc|org.eventb.core.contextFile#Button_ctx|org.eventb.core.axiom#axm1" org.eventb.core.theorem="false"/>
+<org.eventb.core.scCarrierSet name="BUTTON" org.eventb.core.source="/LiftController/Button_ctx.buc|org.eventb.core.contextFile#Button_ctx|org.eventb.core.carrierSet#set1" org.eventb.core.type="ℙ(BUTTON)"/>
+<org.eventb.core.scConstant name="OFF" org.eventb.core.source="/LiftController/Button_ctx.buc|org.eventb.core.contextFile#Button_ctx|org.eventb.core.constant#cst2" org.eventb.core.type="BUTTON"/>
+<org.eventb.core.scConstant name="ON" org.eventb.core.source="/LiftController/Button_ctx.buc|org.eventb.core.contextFile#Button_ctx|org.eventb.core.constant#cst1" org.eventb.core.type="BUTTON"/>
+</org.eventb.core.scContextFile>

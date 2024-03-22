@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.comment="This machine extends the model to \\&#10;1) add buttons within each lift by which passengers indicate the floor to which they want to travel;\\&#10;2) establish a lift schedule associated with each lift.&#10;&#10;The lift schedule:&#10;* is used to determine the direction of travel of a lift and the floors at which the lift should stop\\&#10;* the lift adopts a strategy by which a lift keeps travelling in its current direction while the schedule&#10;   contains floors in that direction." org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1274788702756" org.eventb.texttools.text_representation="machine LiftButtons // Schedule floor requests made inside lifts.&#13; refines LiftPlusFloorDoors  sees Lift_ctx Doors_ctx Buttons_ctx&#13;&#13;variables liftposition liftstatus liftdirection liftdoorstatus floordoorstatus liftbuttons liftschedule&#13;&#13;invariants&#13;  @inv1 liftbuttons ∈ LIFT → (FLOOR → BUTTONS)&#13;  @inv2 liftschedule ∈ LIFT → ℙ(FLOOR)&#13;  @inv3 ∀l,f·l ∈ dom(liftbuttons) ∧ f ∈ dom(liftbuttons(l))&#13;        ⇒&#13;        (liftbuttons(l)(f) = ON ⇒ f ∈ liftschedule(l))&#13;  theorem @thm1 ∀l·l ∈ LIFT&#13;                ⇒&#13;                finite(liftschedule(l))&#13;  @inv4 ∀l·l ∈ LIFT ∧ liftposition(l) ∈ liftschedule(l)&#13;        ⇒&#13;        liftstatus(l) = WAITING&#13;&#13;events&#13;  event INITIALISATION extends INITIALISATION&#13;    then&#13;      @act6 liftbuttons ≔ LIFT×{FLOOR×{OFF}}&#13;      @act7 liftschedule ≔ LIFT×{∅}&#13;  end&#13;&#13;  event OpenFloorDoor extends OpenFloorDoor&#13;    where&#13;      @grd5 liftposition(lift) ∈ liftschedule(lift)&#13;    then&#13;      @act2 liftschedule(lift) ≔ liftschedule(lift) ∖ {liftposition(lift)}&#13;      @act3 liftbuttons(lift) ≔ liftbuttons(lift)  {liftposition(lift) ↦ OFF}&#13;  end&#13;&#13;  event CloseFloorDoor refines CloseFloorDoor&#13;    any lift floor&#13;    where&#13;      @grd1 floor = liftposition(lift)&#13;      @grd2 floordoorstatus(lift)(floor) = OPEN&#13;      @grd3 liftstatus(lift) = WAITING&#13;    then&#13;      @act1 floordoorstatus(lift) ≔ floordoorstatus(lift)  {floor ↦ CLOSED}&#13;      @act2 liftstatus(lift) ≔ STOPPED&#13;  end&#13;&#13;  event OpenLiftDoor extends OpenLiftDoor&#13;    where&#13;      @grd3 liftposition(lift) ∈ liftschedule(lift)&#13;  end&#13;&#13;  event CloseLiftdoor extends CloseLiftdoor&#13;    where&#13;      @grd3 liftstatus(lift) = STOPPED&#13;  end&#13;&#13;  event MoveUpAndStop // Models a lift arriving at a floor and stopping&#13;  refines MoveUp&#13;    any lift&#13;    where&#13;      @grd1 liftstatus(lift) = MOVING&#13;      @grd2 liftdirection(lift) = UP&#13;      @grd3 liftposition(lift)+1 ∈ liftschedule(lift)&#13;    then&#13;      @act1 liftposition(lift) ≔ liftposition(lift) + 1&#13;      @act2 liftdirection :∣ liftdirection' ∈ LIFT → DIRECTION&#13;            ∧ (liftposition(lift) + 1 = MAXFLOOR&#13;            ⇒&#13;            liftdirection' = liftdirection  {lift ↦ DOWN})&#13;            ∧ (liftposition(lift) + 1 ≠ MAXFLOOR&#13;            ⇒&#13;            liftdirection' = liftdirection)&#13;      @act3 liftstatus(lift) ≔ WAITING&#13;  end&#13;&#13;  event MoveUp&#13;  /* Models a lift moving up to the next floor&#13;     Next floor is not MAXFLOOR */&#13;  refines MoveUp&#13;    any lift&#13;    where&#13;      @grd1 liftstatus(lift) = MOVING&#13;      @grd2 liftdirection(lift) = UP&#13;      @grd3 liftschedule(lift) ≠ ∅&#13;      @grd4 liftposition(lift) &lt; max(liftschedule(lift))&#13;      @grd5 liftposition(lift)+1 ∉ liftschedule(lift)&#13;    then&#13;      @act1 liftposition(lift) ≔ liftposition(lift) + 1&#13;      @act2 liftdirection :∣ liftdirection' ∈ LIFT → DIRECTION&#13;            ∧ (liftposition(lift) + 1 ≠ MAXFLOOR&#13;            ⇒ liftdirection' = liftdirection)&#13;            ∧ (liftposition(lift) + 1 = MAXFLOOR&#13;            ⇒ liftdirection' = liftdirection  {lift ↦ DOWN})&#13;      @act3 liftstatus(lift) ≔ MOVING&#13;  end&#13;&#13;  event MoveDownAndStop refines MoveDown&#13;    any lift&#13;    where&#13;      @grd1 liftstatus(lift) = MOVING&#13;      @grd2 liftdirection(lift) = DOWN&#13;      @grd3 liftposition(lift)−1 ∈ liftschedule(lift)&#13;    then&#13;      @act1 liftposition(lift) ≔ liftposition(lift) − 1&#13;      @act2 liftdirection :∣ liftdirection' ∈ LIFT → DIRECTION&#13;            ∧ (liftposition(lift) = 1&#13;            ⇒&#13;            liftdirection' = liftdirection  {lift ↦ UP})&#13;            ∧ (liftposition(lift) ≠ 1&#13;            ⇒&#13;            liftdirection' = liftdirection)&#13;      @act3 liftstatus(lift) ≔ WAITING&#13;  end&#13;&#13;  event MoveDown&#13;  /* Models a lift moving down to the next floor&#13;     The next flloor is not floor 0 */&#13;  refines MoveDown&#13;    any lift&#13;    where&#13;      @grd1 liftstatus(lift) = MOVING&#13;      @grd2 liftdirection(lift) = DOWN&#13;      @grd3 liftschedule(lift) ≠ ∅&#13;      @grd4 liftposition(lift) &gt; min(liftschedule(lift))&#13;      @grd5 liftposition(lift)−1 ∉ liftschedule(lift)&#13;    then&#13;      @act1 liftposition(lift) ≔ liftposition(lift) − 1&#13;      @act2 liftdirection :∣ liftdirection' ∈ LIFT → DIRECTION&#13;            ∧ (liftposition(lift) − 1 ≠ 0&#13;            ⇒ liftdirection' = liftdirection)&#13;            ∧ (liftposition(lift) − 1 = 0&#13;            ⇒ liftdirection' = liftdirection  {lift ↦ UP})&#13;      @act3 liftstatus(lift) ≔ MOVING&#13;  end&#13;&#13;  event StartLift // Models the starting of a STOPPED lift, maintaining of previous direction&#13;  extends StartLift&#13;    where&#13;      @grd3 liftschedule(lift) ≠ ∅&#13;      @grd4 liftdirection(lift) = DOWN&#13;            ⇒&#13;            liftposition(lift) &gt; min(liftschedule(lift))&#13;      @grd5 liftdirection(lift) = UP&#13;            ⇒&#13;            liftposition(lift) &lt; max(liftschedule(lift))&#13;      @grd6 liftposition(lift) ∉ liftschedule(lift)&#13;  end&#13;&#13;  event ChangeDir // Models the changing of direction of a STOPPED lift&#13;  extends ChangeDir&#13;    where&#13;      @grd4 liftschedule(lift) ≠ ∅&#13;      @grd5 (liftdirection(lift) = UP&#13;            ⇒&#13;            liftposition(lift) &gt; max(liftschedule(lift)))&#13;      @grd6 (liftdirection(lift) = DOWN&#13;            ⇒&#13;            liftposition(lift) &lt; min(liftschedule(lift)))&#13;  end&#13;&#13;  event IdleLift // Idle lifts cannot move&#13;  extends IdleLift&#13;    where&#13;      @grd3 liftschedule(lift) = ∅&#13;  end&#13;&#13;  event IdleToWaiting // Ready an Idle lift to enable moving&#13;  refines ActiveateLift&#13;    any lift&#13;    where&#13;      @grd1 liftstatus(lift) = IDLE&#13;      @grd2 liftposition(lift) ∈ liftschedule(lift)&#13;    then&#13;      @act1 liftstatus(lift) ≔ WAITING&#13;  end&#13;&#13;  event IdleToStopped refines ActiveateLift&#13;    any lift&#13;    where&#13;      @grd1 liftstatus(lift) = IDLE&#13;      @grd2 liftposition(lift) ∉ liftschedule(lift)&#13;    then&#13;      @act1 liftstatus(lift) ≔ STOPPED&#13;  end&#13;&#13;  event SelectFloor // Select floor to stop using lift buttons; also adds floor to liftschedule&#13;    any lift floor&#13;    where&#13;      @grd1 floor ∈ FLOOR&#13;      @grd2 liftbuttons(lift)(floor) = OFF&#13;      @grd3 liftposition(lift) ≠ floor&#13;    then&#13;      @act1 liftbuttons(lift) ≔ liftbuttons(lift)  {floor ↦ ON}&#13;      @act2 liftschedule(lift) ≔ liftschedule(lift) ∪ {floor}&#13;  end&#13;&#13;  event ExtendLiftSchedule // Event for adding floor to the liftschedule for lift&#13;    any lift floor&#13;    where&#13;      @grd1 floor ∈ FLOOR&#13;      @grd2 floor ∉ liftschedule(lift)&#13;      @grd3 liftposition(lift) ≠ floor&#13;    then&#13;      @act1 liftschedule(lift) ≔ liftschedule(lift) ∪ {floor}&#13;  end&#13;&#13;  event ContractLiftSchedule // Removes floor that is not in liftbuttons from liftschedule&#13;    any lift floor&#13;    where&#13;      @grd1 floor ∈ liftschedule(lift)&#13;      @grd2 liftbuttons(lift)(floor) = OFF&#13;    then&#13;      @act1 liftschedule(lift) ≔ liftschedule(lift) ∖ {floor}&#13;  end&#13;end&#13;" version="5">
+<org.eventb.core.refinesMachine name="_0l_3cGf0Ed-6O_y_i4NrrQ" org.eventb.core.target="LiftPlusDoors"/>
+<org.eventb.core.seesContext name="_0l_3cWf0Ed-6O_y_i4NrrQ" org.eventb.core.target="Lift_ctx"/>
+<org.eventb.core.seesContext name="_0l_3cmf0Ed-6O_y_i4NrrQ" org.eventb.core.target="Door_ctx"/>
+<org.eventb.core.seesContext name="_0l_3c2f0Ed-6O_y_i4NrrQ" org.eventb.core.target="Button_ctx"/>
+<org.eventb.core.variable name="set1" org.eventb.core.identifier="liftposition"/>
+<org.eventb.core.variable name="set2" org.eventb.core.identifier="liftstatus"/>
+<org.eventb.core.variable name="set3" org.eventb.core.identifier="liftdirection"/>
+<org.eventb.core.variable name="set4" org.eventb.core.identifier="liftdoorstatus"/>
+<org.eventb.core.variable name="set5" org.eventb.core.identifier="floordoorstatus"/>
+<org.eventb.core.variable name="set6" org.eventb.core.identifier="liftbuttons"/>
+<org.eventb.core.variable name="set7" org.eventb.core.identifier="liftschedule"/>
+<org.eventb.core.invariant name="inv1" org.eventb.core.label="inv1" org.eventb.core.predicate="liftbuttons ∈ LIFT → (FLOOR → BUTTON)"/>
+<org.eventb.core.invariant name="inv2" org.eventb.core.label="inv2" org.eventb.core.predicate="liftschedule ∈ LIFT → ℙ(FLOOR)"/>
+<org.eventb.core.invariant name="inv3" org.eventb.core.label="inv3" org.eventb.core.predicate="∀l,f·l ∈ LIFT ∧ f ∈ FLOOR&#10;⇒&#10;(liftbuttons(l)(f) = ON ⇒ f ∈ liftschedule(l))"/>
+<org.eventb.core.variable name="_uVxTgmfIEd-6O_y_i4NrrS" org.eventb.core.identifier="waiting"/>
+<org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="internal_act1" org.eventb.core.assignment="liftbuttons ≔ LIFT×{FLOOR×{OFF}}" org.eventb.core.label="act7"/>
+<org.eventb.core.action name="internal_act2" org.eventb.core.assignment="liftschedule ≔ LIFT×{∅}" org.eventb.core.label="act8"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt13" org.eventb.core.comment="Select floor to stop using lift buttons; also adds floor to liftschedule" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SelectFloor">
+<org.eventb.core.parameter name="internal_prm1" org.eventb.core.identifier="lift"/>
+<org.eventb.core.parameter name="internal_prm2" org.eventb.core.identifier="floor"/>
+<org.eventb.core.guard name="internal_prm4" org.eventb.core.label="grd1" org.eventb.core.predicate="floor ∈ FLOOR"/>
+<org.eventb.core.guard name="internal_grd3" org.eventb.core.label="grd2" org.eventb.core.predicate="liftbuttons(lift)(floor) = OFF"/>
+<org.eventb.core.guard name="internal_prm3" org.eventb.core.label="grd3" org.eventb.core.predicate="floor ≠ liftposition(lift)"/>
+<org.eventb.core.action name="internal_act1" org.eventb.core.assignment="liftbuttons(lift) ≔ liftbuttons(lift)  {floor ↦ ON}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="internal_act2" org.eventb.core.assignment="liftschedule(lift) ≔ liftschedule(lift) ∪ {floor}" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt7" org.eventb.core.comment="Models the starting of a STOPPED lift, maintaining of previous direction" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="StartLift">
+<org.eventb.core.refinesEvent name="_0mFXAGf0Ed-6O_y_i4NrrQ" org.eventb.core.target="StartLift"/>
+<org.eventb.core.guard name="internal_grd1" org.eventb.core.label="grd4" org.eventb.core.predicate="liftschedule(lift) ≠ ∅"/>
+<org.eventb.core.guard name="internal_grd2" org.eventb.core.label="grd5" org.eventb.core.predicate="liftdirection(lift) = DOWN&#10;⇒&#10;liftposition(lift) &gt; min(liftschedule(lift))"/>
+<org.eventb.core.guard name="internal_grd3" org.eventb.core.label="grd6" org.eventb.core.predicate="liftdirection(lift) = UP&#10;⇒&#13;&#10;liftposition(lift) &lt; max(liftschedule(lift))"/>
+<org.eventb.core.guard name="internal_refinesEvent2" org.eventb.core.label="grd7" org.eventb.core.predicate="liftposition(lift) ∉ liftschedule(lift)"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt8" org.eventb.core.comment="Models the changing of direction of a STOPPED lift" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ChangeDir">
+<org.eventb.core.refinesEvent name="_0mF-EGf0Ed-6O_y_i4NrrQ" org.eventb.core.target="ChangeDir"/>
+<org.eventb.core.guard name="internal_grd4" org.eventb.core.label="grd4" org.eventb.core.predicate="liftschedule(lift) ≠ ∅"/>
+<org.eventb.core.guard name="internal_grd3" org.eventb.core.label="grd5" org.eventb.core.predicate="(liftdirection(lift) = UP&#10;⇒&#10;liftposition(lift) &gt; max(liftschedule(lift)))"/>
+<org.eventb.core.guard name="internal_refinesEvent2" org.eventb.core.label="grd6" org.eventb.core.predicate="(liftdirection(lift) = DOWN&#10;⇒&#10;liftposition(lift) &lt; min(liftschedule(lift)))"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt11" org.eventb.core.comment="Idle lifts cannot move" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="IdleLift">
+<org.eventb.core.refinesEvent name="_0mGlIGf0Ed-6O_y_i4NrrQ" org.eventb.core.target="IdleLift"/>
+<org.eventb.core.guard name="internal_grd4" org.eventb.core.label="grd4" org.eventb.core.predicate="liftschedule(lift) = ∅"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_uVxTgmfIEd-6O_y_i4NrrV" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ActivateLift">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="ActivateLift"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="liftschedule(lift) ≔ liftschedule(lift) ∪ {liftposition(lift)}" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt9" org.eventb.core.comment="Models a lift moving up to the next floor&#13;     Next floor is not MAXFLOOR " org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="MoveUp">
+<org.eventb.core.refinesEvent name="_0mC6wGf0Ed-6O_y_i4NrrQ" org.eventb.core.target="MoveUp"/>
+<org.eventb.core.parameter name="internal_element1" org.eventb.core.identifier="lift"/>
+<org.eventb.core.guard name="internal_element2" org.eventb.core.label="grd1" org.eventb.core.predicate="liftstatus(lift) = MOVING"/>
+<org.eventb.core.guard name="internal_element3" org.eventb.core.label="grd2" org.eventb.core.predicate="liftdirection(lift) = UP"/>
+<org.eventb.core.action name="internal_element1" org.eventb.core.assignment="liftposition(lift) ≔ liftposition(lift) + 1" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="internal_element2" org.eventb.core.assignment="liftdirection :∣ liftdirection' ∈ LIFT → DIRECTION&#10;∧ (liftposition(lift) + 1 = MAXFLOOR&#10;⇒&#10;liftdirection' = liftdirection  {lift ↦ DOWN})&#10;∧ (liftposition(lift) + 1 ≠ MAXFLOOR&#10;⇒&#10;liftdirection' = liftdirection)" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name="internal_grd1" org.eventb.core.label="grd3" org.eventb.core.predicate="liftschedule(lift) ≠ ∅"/>
+<org.eventb.core.guard name="internal_grd2" org.eventb.core.label="grd4" org.eventb.core.predicate="liftposition(lift) &lt; max(liftschedule(lift))"/>
+<org.eventb.core.guard name="internal_refinesEvent2" org.eventb.core.label="grd5" org.eventb.core.predicate="liftposition(lift)+1 ∉ liftschedule(lift)"/>
+<org.eventb.core.action name="internal_refinesEvent3" org.eventb.core.assignment="liftstatus(lift) ≔ MOVING" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt6" org.eventb.core.comment="Models a lift arriving at a floor and stopping" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="MoveUpAndStop">
+<org.eventb.core.refinesEvent name="_0mCTsmf0Ed-6O_y_i4NrrQ" org.eventb.core.target="MoveUpAndStop"/>
+<org.eventb.core.guard name="internal_refinesEvent2" org.eventb.core.label="grd3" org.eventb.core.predicate="liftposition(lift)+1 ∈ liftschedule(lift)"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt10" org.eventb.core.comment="Models a lift moving down to the next floor&#13;     The next flloor is not floor 0 " org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="MoveDown">
+<org.eventb.core.refinesEvent name="_0mEv8Gf0Ed-6O_y_i4NrrQ" org.eventb.core.target="MoveDown"/>
+<org.eventb.core.parameter name="internal_element1" org.eventb.core.identifier="lift"/>
+<org.eventb.core.guard name="internal_element2" org.eventb.core.label="grd1" org.eventb.core.predicate="liftstatus(lift) = MOVING"/>
+<org.eventb.core.guard name="internal_element3" org.eventb.core.label="grd2" org.eventb.core.predicate="liftdirection(lift) = DOWN"/>
+<org.eventb.core.action name="internal_element1" org.eventb.core.assignment="liftposition(lift) ≔ liftposition(lift) − 1" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="internal_grd1" org.eventb.core.label="grd3" org.eventb.core.predicate="liftschedule(lift) ≠ ∅"/>
+<org.eventb.core.guard name="internal_grd2" org.eventb.core.label="grd4" org.eventb.core.predicate="liftposition(lift) &gt; min(liftschedule(lift))"/>
+<org.eventb.core.guard name="internal_refinesEvent2" org.eventb.core.label="grd5" org.eventb.core.predicate="liftposition(lift)−1 ∉ liftschedule(lift)"/>
+<org.eventb.core.action name="internal_act1" org.eventb.core.assignment="liftdirection :∣ liftdirection' ∈ LIFT → DIRECTION&#10;∧ (liftposition(lift) − 1 ≠ 0&#10;⇒ liftdirection' = liftdirection)&#10;∧ (liftposition(lift) − 1 = 0&#10;⇒ liftdirection' = liftdirection  {lift ↦ UP})" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="internal_refinesEvent3" org.eventb.core.assignment="liftstatus(lift) ≔ MOVING" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="element5" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="MoveDownAndStop">
+<org.eventb.core.refinesEvent name="_0mEI4Gf0Ed-6O_y_i4NrrQ" org.eventb.core.target="MoveDownAndStop"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd3" org.eventb.core.predicate="liftposition(lift)−1 ∈ liftschedule(lift)"/>
+<org.eventb.core.guard name="_0mEI4Gf0Ed-6O_y_i4NrrR" org.eventb.core.label="grd4" org.eventb.core.predicate="liftposition(lift)−1 ∈ liftschedule(lift)"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt2" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="OpenFloorDoor">
+<org.eventb.core.refinesEvent name="_0mBFkGf0Ed-6O_y_i4NrrQ" org.eventb.core.target="OpenFloorDoor"/>
+<org.eventb.core.guard name="element1" org.eventb.core.label="grd4" org.eventb.core.predicate="liftposition(lift) ∈ liftschedule(lift)"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt3" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="CloseFloorDoor">
+<org.eventb.core.refinesEvent name="_0mBFkWf0Ed-6O_y_i4NrrQ" org.eventb.core.target="CloseFloorDoor"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt4" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="OpenLiftDoor">
+<org.eventb.core.refinesEvent name="_0mCTsGf0Ed-6O_y_i4NrrQ" org.eventb.core.target="OpenLiftDoor"/>
+<org.eventb.core.guard name="element1" org.eventb.core.label="grd4" org.eventb.core.predicate="liftposition(lift) ∈ liftschedule(lift)"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt5" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="CloseLiftdoor">
+<org.eventb.core.refinesEvent name="_0mCTsWf0Ed-6O_y_i4NrrQ" org.eventb.core.target="CloseLiftdoor"/>
+<org.eventb.core.action name="_0mCTsWf0Ed-6O_y_i4NrrS" org.eventb.core.assignment="liftbuttons(lift) ≔ (liftbuttons(lift)  {liftposition(lift) ↦ OFF})" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="_0mCTsWf0Ed-6O_y_i4NrrR" org.eventb.core.assignment="liftschedule(lift) ≔ liftschedule(lift) ∖ {liftposition(lift)}" org.eventb.core.label="act3"/>
+<org.eventb.core.guard name="_0mCTsWf0Ed-6O_y_i4NrrT" org.eventb.core.label="grd4" org.eventb.core.predicate="liftposition(lift) ∈ liftschedule(lift)"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_uVxTgmfIEd-6O_y_i4NrrT" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="Release">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Release"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

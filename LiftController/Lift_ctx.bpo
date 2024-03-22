@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="DIRECTION" org.eventb.core.type="ℙ(DIRECTION)"/>
+<org.eventb.core.poIdentifier name="LIFT" org.eventb.core.type="ℙ(LIFT)"/>
+<org.eventb.core.poIdentifier name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.poIdentifier name="CHANGE" org.eventb.core.type="ℙ(DIRECTION×DIRECTION)"/>
+<org.eventb.core.poIdentifier name="DOWN" org.eventb.core.type="DIRECTION"/>
+<org.eventb.core.poIdentifier name="FLOOR" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="IDLE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.poIdentifier name="MAXFLOOR" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="MOVING" org.eventb.core.type="STATUS"/>
+<org.eventb.core.poIdentifier name="STOPPED" org.eventb.core.type="STATUS"/>
+<org.eventb.core.poIdentifier name="UP" org.eventb.core.type="DIRECTION"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="thm1/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/Lift_ctx.bpo|org.eventb.core.poFile#Lift_ctx|org.eventb.core.poPredicateSet#HYP."/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="FLOOR≠(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm9"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm9"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/Lift_ctx.bpo|org.eventb.core.poFile#Lift_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/LiftController/Lift_ctx.bpo|org.eventb.core.poFile#Lift_ctx|org.eventb.core.poPredicateSet#HYP."/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="thm2/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/Lift_ctx.bpo|org.eventb.core.poFile#Lift_ctx|org.eventb.core.poPredicateSet#HYP\/"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(FLOOR)" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm10"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm10"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/Lift_ctx.bpo|org.eventb.core.poFile#Lift_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/LiftController/Lift_ctx.bpo|org.eventb.core.poFile#Lift_ctx|org.eventb.core.poPredicateSet#HYP\/"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="thm3/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/Lift_ctx.bpo|org.eventb.core.poFile#Lift_ctx|org.eventb.core.poPredicateSet#HYP0"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(STATUS)" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm11"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm11"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/Lift_ctx.bpo|org.eventb.core.poFile#Lift_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/LiftController/Lift_ctx.bpo|org.eventb.core.poFile#Lift_ctx|org.eventb.core.poPredicateSet#HYP0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="thm4/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/Lift_ctx.bpo|org.eventb.core.poFile#Lift_ctx|org.eventb.core.poPredicateSet#HYP1"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(DIRECTION)" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm12"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm12"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/Lift_ctx.bpo|org.eventb.core.poFile#Lift_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/LiftController/Lift_ctx.bpo|org.eventb.core.poFile#Lift_ctx|org.eventb.core.poPredicateSet#HYP1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="thm5/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/Lift_ctx.bpo|org.eventb.core.poFile#Lift_ctx|org.eventb.core.poPredicateSet#HYP2"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(CHANGE)" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm13"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm13"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/Lift_ctx.bpo|org.eventb.core.poFile#Lift_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/LiftController/Lift_ctx.bpo|org.eventb.core.poFile#Lift_ctx|org.eventb.core.poPredicateSet#HYP2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="HYP." org.eventb.core.parentSet="/LiftController/Lift_ctx.bpo|org.eventb.core.poFile#Lift_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="MAXFLOOR∈ℕ1" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm1"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="MAXFLOOR≥2" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#_RAc1wWe8Ed-6O_y_i4NrrV"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="FLOOR=0 ‥ MAXFLOOR" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm2"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="finite(LIFT)" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm3"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="partition(DIRECTION,{UP},{DOWN})" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm4"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="partition(STATUS,{IDLE},{STOPPED},{MOVING})" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm5"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="CHANGE∈DIRECTION ⤖ DIRECTION" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm6"/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="CHANGE={UP ↦ DOWN,DOWN ↦ UP}" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm7"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYP/" org.eventb.core.parentSet="/LiftController/Lift_ctx.bpo|org.eventb.core.poFile#Lift_ctx|org.eventb.core.poPredicateSet#HYP." org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="FLOOR≠(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm9"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYP0" org.eventb.core.parentSet="/LiftController/Lift_ctx.bpo|org.eventb.core.poFile#Lift_ctx|org.eventb.core.poPredicateSet#HYP\/" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="finite(FLOOR)" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm10"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYP1" org.eventb.core.parentSet="/LiftController/Lift_ctx.bpo|org.eventb.core.poFile#Lift_ctx|org.eventb.core.poPredicateSet#HYP0" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="finite(STATUS)" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm11"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYP2" org.eventb.core.parentSet="/LiftController/Lift_ctx.bpo|org.eventb.core.poFile#Lift_ctx|org.eventb.core.poPredicateSet#HYP1" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD11" org.eventb.core.predicate="finite(DIRECTION)" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm12"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/LiftController/Lift_ctx.bpo|org.eventb.core.poFile#Lift_ctx|org.eventb.core.poPredicateSet#HYP2" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD12" org.eventb.core.predicate="finite(CHANGE)" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm13"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

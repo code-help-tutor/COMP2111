@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="COIN" org.eventb.core.type="ℙ(COIN)"/>
+<org.eventb.core.poIdentifier name="CoinValue" org.eventb.core.type="ℙ(COIN×ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/RailTicket/Coin.bpo|org.eventb.core.poFile#Coin|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="finite(COIN)" org.eventb.core.source="/RailTicket/Coin.buc|org.eventb.core.contextFile#Coin|org.eventb.core.axiom#1"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="CoinValue∈COIN ↣ ℕ1" org.eventb.core.source="/RailTicket/Coin.buc|org.eventb.core.contextFile#Coin|org.eventb.core.axiom#("/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

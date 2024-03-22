@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;org.animb.valuation.valBase" org.eventb.texttools.text_lastmodified="1301713930421" org.eventb.texttools.text_representation="context Library_ctx&#10;&#10;constants maxloan&#10;sets MEMBER BOOK&#10;axioms&#10;  @axm1 finite(MEMBER)&#10;  @axm2 finite(BOOK)&#10;  @axm3 maxloan ∈ ℕ1&#10;end&#10;" version="3">
+<org.eventb.core.carrierSet name="set1" org.eventb.core.identifier="MEMBER"/>
+<org.eventb.core.carrierSet name="set2" org.eventb.core.identifier="BOOK"/>
+<org.eventb.core.constant name="__-TbIFzWEeC23oZAk6yf5g" org.eventb.core.identifier="maxloan"/>
+<org.eventb.core.axiom name="axm1A" org.eventb.core.label="axm1" org.eventb.core.predicate="finite(MEMBER)"/>
+<org.eventb.core.axiom name="axm2A" org.eventb.core.label="axm2" org.eventb.core.predicate="finite(BOOK)"/>
+<org.eventb.core.axiom name="__-UCMFzWEeC23oZAk6yf5g" org.eventb.core.label="axm3" org.eventb.core.predicate="maxloan ∈ ℕ1"/>
+</org.eventb.core.contextFile>

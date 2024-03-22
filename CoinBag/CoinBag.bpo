@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="7">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="COIN" org.eventb.core.type="ℙ(COIN)"/>
+<org.eventb.core.poIdentifier name="CoinValue" org.eventb.core.type="ℙ(COIN×ℤ)"/>
+<org.eventb.core.poPredicate name="CoinValuf" org.eventb.core.predicate="finite(COIN)" org.eventb.core.source="/RailTicket/Coin.buc|org.eventb.core.contextFile#Coin|org.eventb.core.axiom#1"/>
+<org.eventb.core.poPredicate name="CoinValug" org.eventb.core.predicate="CoinValue∈COIN ↣ ℕ1" org.eventb.core.source="/RailTicket/Coin.buc|org.eventb.core.contextFile#Coin|org.eventb.core.axiom#("/>
+<org.eventb.core.poIdentifier name="COINBAG" org.eventb.core.type="ℙ(ℙ(COIN×ℤ))"/>
+<org.eventb.core.poIdentifier name="addcoin" org.eventb.core.type="ℙ(COIN×ℙ(COIN×ℤ)×ℙ(COIN×ℤ))"/>
+<org.eventb.core.poIdentifier name="bagdiff" org.eventb.core.type="ℙ(ℙ(COIN×ℤ)×ℙ(COIN×ℤ)×ℙ(COIN×ℤ))"/>
+<org.eventb.core.poIdentifier name="bagunion" org.eventb.core.type="ℙ(ℙ(COIN×ℤ)×ℙ(COIN×ℤ)×ℙ(COIN×ℤ))"/>
+<org.eventb.core.poIdentifier name="bagvalue" org.eventb.core.type="ℙ(ℙ(COIN×ℤ)×ℤ)"/>
+<org.eventb.core.poIdentifier name="emptybag" org.eventb.core.type="ℙ(COIN×ℤ)"/>
+<org.eventb.core.poIdentifier name="removecoin" org.eventb.core.type="ℙ(COIN×ℙ(COIN×ℤ)×ℙ(COIN×ℤ))"/>
+<org.eventb.core.poIdentifier name="subbag" org.eventb.core.type="ℙ(ℙ(COIN×ℤ)×ℙ(COIN×ℤ)×BOOL)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="axm2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="7">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoio"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀b⦂ℙ(COIN×ℤ)·b∈COINBAG⇒(∀c⦂COIN·c∈dom(b)∧b∈COIN ⇸ ℤ)" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setL"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setL"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoio"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm2/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="7">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoio"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀b⦂ℙ(COIN×ℤ)·b∈COINBAG⇒b={c⦂COIN·⊤ ∣ c ↦ b(c)}" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setL"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setL"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoio"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoiq"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀b⦂ℙ(COIN×ℤ),c⦂COIN·b∈COINBAG∧c∈dom(b)⇒b∈dom(bagvalue)∧bagvalue∈ℙ(COIN × ℤ) ⇸ ℤ∧b∈COIN ⇸ ℤ∧c∈dom(CoinValue)∧CoinValue∈COIN ⇸ ℤ∧b{c ↦ 0}∈dom(bagvalue)" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#axm5"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#axm5"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoiq"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoir"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀b⦂ℙ(COIN×ℤ)·b∈COINBAG∧(b≠(∅ ⦂ ℙ(COIN×ℤ))⇒ran(b)={0})⇒b∈dom(bagvalue)∧bagvalue∈ℙ(COIN × ℤ) ⇸ ℤ" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#axm6"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#axm6"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoir"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm7/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoit"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="emptybag∈dom(bagvalue)∧bagvalue∈ℙ(COIN × ℤ) ⇸ ℤ" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#set;"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#set;"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoit"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm7/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoit"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="bagvalue(emptybag)=0" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#set;"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#set;"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoit"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm9/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoiv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀b1⦂ℙ(COIN×ℤ),b2⦂ℙ(COIN×ℤ)·b1∈COINBAG∧b2∈COINBAG⇒b1 ↦ b2∈dom(bagunion)∧bagunion∈ℙ(COIN × ℤ) × ℙ(COIN × ℤ) ⇸ ℙ(COIN × ℤ)∧(∀c⦂COIN·c∈COIN⇒c∈dom(b1)∧b1∈COIN ⇸ ℤ∧c∈dom(b2)∧b2∈COIN ⇸ ℤ)" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#axm8"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#axm8"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoiv"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm10/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoiw"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀b1⦂ℙ(COIN×ℤ),b2⦂ℙ(COIN×ℤ)·b1∈COINBAG∧b2∈COINBAG⇒b1 ↦ b2∈dom(bagunion)∧bagunion∈ℙ(COIN × ℤ) × ℙ(COIN × ℤ) ⇸ ℙ(COIN × ℤ)∧b2 ↦ b1∈dom(bagunion)" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#set@"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#set@"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoiw"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm10/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoiw"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀b1⦂ℙ(COIN×ℤ),b2⦂ℙ(COIN×ℤ)·b1∈COINBAG∧b2∈COINBAG⇒bagunion(b1 ↦ b2)=bagunion(b2 ↦ b1)" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#set@"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#set@"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoiw"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm11/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoix"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀b⦂ℙ(COIN×ℤ)·b∈COINBAG⇒emptybag ↦ b∈dom(bagunion)∧bagunion∈ℙ(COIN × ℤ) × ℙ(COIN × ℤ) ⇸ ℙ(COIN × ℤ)" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setA"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setA"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoix"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm11/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoix"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀b⦂ℙ(COIN×ℤ)·b∈COINBAG⇒bagunion(emptybag ↦ b)=b" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setA"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setA"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoix"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm12/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoiy"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀b⦂ℙ(COIN×ℤ)·b∈COINBAG⇒emptybagb∈dom(bagvalue)∧bagvalue∈ℙ(COIN × ℤ) ⇸ ℤ∧b∈dom(bagvalue)" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setB"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setB"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoiy"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm12/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoiy"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀b⦂ℙ(COIN×ℤ)·b∈COINBAG⇒bagvalue(emptybagb)=bagvalue(b)" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setB"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setB"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoiy"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm14/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoi{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀b1⦂ℙ(COIN×ℤ),b2⦂ℙ(COIN×ℤ)·b1∈COINBAG∧b2∈COINBAG⇒(∀c⦂COIN·c∈COIN⇒c∈dom(b1)∧b1∈COIN ⇸ ℤ∧c∈dom(b2)∧b2∈COIN ⇸ ℤ)∧b1 ↦ b2∈dom(subbag)∧subbag∈ℙ(COIN × ℤ) × ℙ(COIN × ℤ) ⇸ BOOL" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#set6"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#set6"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoi{"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm15/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoi\|"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀b⦂ℙ(COIN×ℤ)·b∈COINBAG⇒emptybag ↦ b∈dom(subbag)∧subbag∈ℙ(COIN × ℤ) × ℙ(COIN × ℤ) ⇸ BOOL" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#set?"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#set?"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoi\|"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm15/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoi\|"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀b⦂ℙ(COIN×ℤ)·b∈COINBAG⇒subbag(emptybag ↦ b)=TRUE" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#set?"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#set?"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoi\|"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm17/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoi~"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀b1⦂ℙ(COIN×ℤ),b2⦂ℙ(COIN×ℤ)·b1∈COINBAG∧b2∈COINBAG⇒b2 ↦ b1∈dom(subbag)∧subbag∈ℙ(COIN × ℤ) × ℙ(COIN × ℤ) ⇸ BOOL" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#set="/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#set="/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoi~"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm18/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoj'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀b1⦂ℙ(COIN×ℤ),b2⦂ℙ(COIN×ℤ)·(b1∈COINBAG∧b2∈COINBAG⇒b2 ↦ b1∈dom(subbag)∧subbag∈ℙ(COIN × ℤ) × ℙ(COIN × ℤ) ⇸ BOOL)∧(b1∈COINBAG∧b2∈COINBAG∧subbag(b2 ↦ b1)=TRUE⇒b1 ↦ b2∈dom(bagdiff)∧bagdiff∈ℙ(COIN × ℤ) × ℙ(COIN × ℤ) ⇸ ℙ(COIN × ℤ)∧(∀c⦂COIN·c∈COIN⇒c∈dom(b1)∧b1∈COIN ⇸ ℤ∧c∈dom(b2)∧b2∈COIN ⇸ ℤ))" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#set8"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#set8"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoj'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm19/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoj("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀b1⦂ℙ(COIN×ℤ),b2⦂ℙ(COIN×ℤ)·(b1∈COINBAG∧b2∈COINBAG⇒b2 ↦ b1∈dom(subbag)∧subbag∈ℙ(COIN × ℤ) × ℙ(COIN × ℤ) ⇸ BOOL)∧(b1∈COINBAG∧b2∈COINBAG∧subbag(b2 ↦ b1)=TRUE⇒b1 ↦ b2∈dom(bagdiff)∧bagdiff∈ℙ(COIN × ℤ) × ℙ(COIN × ℤ) ⇸ ℙ(COIN × ℤ)∧bagdiff(b1 ↦ b2)∈dom(bagvalue)∧bagvalue∈ℙ(COIN × ℤ) ⇸ ℤ∧b1∈dom(bagvalue)∧b2∈dom(bagvalue))" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#set&gt;"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#set&gt;"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoj("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm20/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoj)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀b1⦂ℙ(COIN×ℤ),b2⦂ℙ(COIN×ℤ)·(b1∈COINBAG∧b2∈COINBAG⇒b1 ↦ b2∈dom(subbag)∧subbag∈ℙ(COIN × ℤ) × ℙ(COIN × ℤ) ⇸ BOOL)∧(b1∈COINBAG∧b2∈COINBAG∧subbag(b1 ↦ b2)=TRUE⇒b1∈dom(bagvalue)∧bagvalue∈ℙ(COIN × ℤ) ⇸ ℤ∧b2∈dom(bagvalue))" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setD"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setD"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoj)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm20/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoj)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀b1⦂ℙ(COIN×ℤ),b2⦂ℙ(COIN×ℤ)·b1∈COINBAG∧b2∈COINBAG∧subbag(b1 ↦ b2)=TRUE⇒bagvalue(b1)≤bagvalue(b2)" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setD"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setD"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoj)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm21/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoj*"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀b1⦂ℙ(COIN×ℤ),b2⦂ℙ(COIN×ℤ)·b1∈COINBAG∧b2∈COINBAG⇒b1 ↦ b2∈dom(bagunion)∧bagunion∈ℙ(COIN × ℤ) × ℙ(COIN × ℤ) ⇸ ℙ(COIN × ℤ)∧bagunion(b1 ↦ b2)∈dom(bagvalue)∧bagvalue∈ℙ(COIN × ℤ) ⇸ ℤ∧b1∈dom(bagvalue)∧b2∈dom(bagvalue)" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setC"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setC"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoj*"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm21/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoj*"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀b1⦂ℙ(COIN×ℤ),b2⦂ℙ(COIN×ℤ)·b1∈COINBAG∧b2∈COINBAG⇒bagvalue(bagunion(b1 ↦ b2))=bagvalue(b1)+bagvalue(b2)" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setC"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setC"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoj*"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm23/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoj,"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀c⦂COIN,b⦂ℙ(COIN×ℤ)·c∈COIN∧b∈COINBAG⇒c ↦ b∈dom(addcoin)∧addcoin∈COIN × ℙ(COIN × ℤ) ⇸ ℙ(COIN × ℤ)∧c∈dom(b)∧b∈COIN ⇸ ℤ" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setF"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setF"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoj,"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm25/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoj."/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀c⦂COIN,b⦂ℙ(COIN×ℤ)·c∈COIN∧b∈COINBAG⇒c∈dom(b)∧b∈COIN ⇸ ℤ" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setK"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setK"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoj."/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm25/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoj."/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀c⦂COIN,b⦂ℙ(COIN×ℤ)·c∈COIN∧b∈COINBAG∧b(c)≠0⇒c ↦ b∈dom(removecoin)" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setK"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setK"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoj."/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm26/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoj\/"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀c⦂COIN,b⦂ℙ(COIN×ℤ)·(c∈COIN∧b∈COINBAG⇒c∈dom(b)∧b∈COIN ⇸ ℤ)∧(c∈COIN∧b∈COINBAG∧b(c)≠0⇒c ↦ b∈dom(removecoin)∧removecoin∈COIN × ℙ(COIN × ℤ) ⇸ ℙ(COIN × ℤ))" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setJ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setJ"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoj\/"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm27/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="7">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoj0"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀c⦂COIN,b⦂ℙ(COIN×ℤ)·c∈COIN∧b∈COINBAG⇒c ↦ b∈dom(addcoin)∧addcoin∈COIN × ℙ(COIN × ℤ) ⇸ ℙ(COIN × ℤ)∧addcoin(c ↦ b)∈dom(bagvalue)∧bagvalue∈ℙ(COIN × ℤ) ⇸ ℤ∧b∈dom(bagvalue)∧c∈dom(CoinValue)∧CoinValue∈COIN ⇸ ℤ" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setM"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setM"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoj0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="HYPCoio" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="COINBAG=COIN → ℕ" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#axm3"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPCoiq" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoio" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="∀b⦂ℙ(COIN×ℤ)·b∈COINBAG⇒b={c⦂COIN·⊤ ∣ c ↦ b(c)}" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setL"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="bagvalue∈COINBAG → ℕ" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#axm4"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPCoir" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoiq" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="∀b⦂ℙ(COIN×ℤ),c⦂COIN·b∈COINBAG∧c∈dom(b)⇒bagvalue(b)=b(c)∗CoinValue(c)+bagvalue(b{c ↦ 0})" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#axm5"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPCoit" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoir" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="∀b⦂ℙ(COIN×ℤ)·b∈COINBAG∧(b≠(∅ ⦂ ℙ(COIN×ℤ))⇒ran(b)={0})⇒bagvalue(b)=0" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#axm6"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="emptybag=COIN × {0}" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#set:"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPCoiv" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoit" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="bagvalue(emptybag)=0" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#set;"/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="bagunion∈COINBAG × COINBAG → COINBAG" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#axm7"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPCoiw" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoiv" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="∀b1⦂ℙ(COIN×ℤ),b2⦂ℙ(COIN×ℤ)·b1∈COINBAG∧b2∈COINBAG⇒bagunion(b1 ↦ b2)={c⦂COIN·c∈COIN ∣ c ↦ b1(c)+b2(c)}" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#axm8"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPCoix" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoiw" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="∀b1⦂ℙ(COIN×ℤ),b2⦂ℙ(COIN×ℤ)·b1∈COINBAG∧b2∈COINBAG⇒bagunion(b1 ↦ b2)=bagunion(b2 ↦ b1)" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#set@"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPCoiy" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoix" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="∀b⦂ℙ(COIN×ℤ)·b∈COINBAG⇒bagunion(emptybag ↦ b)=b" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setA"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPCoi{" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoiy" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicate name="PRD11" org.eventb.core.predicate="∀b⦂ℙ(COIN×ℤ)·b∈COINBAG⇒bagvalue(emptybagb)=bagvalue(b)" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setB"/>
+<org.eventb.core.poPredicate name="PRD12" org.eventb.core.predicate="subbag∈COINBAG × COINBAG → BOOL" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#set5"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPCoi|" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoi{" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD13" org.eventb.core.predicate="∀b1⦂ℙ(COIN×ℤ),b2⦂ℙ(COIN×ℤ)·b1∈COINBAG∧b2∈COINBAG∧((∀c⦂COIN·c∈COIN∧b1(c)≤b2(c))⇔subbag(b1 ↦ b2)=TRUE)" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#set6"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPCoi~" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoi\|" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicate name="PRD14" org.eventb.core.predicate="∀b⦂ℙ(COIN×ℤ)·b∈COINBAG⇒subbag(emptybag ↦ b)=TRUE" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#set?"/>
+<org.eventb.core.poPredicate name="PRD15" org.eventb.core.predicate="bagdiff∈COINBAG × COINBAG ⇸ COINBAG" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#set7"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPCoj'" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoi~" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicate name="PRD16" org.eventb.core.predicate="∀b1⦂ℙ(COIN×ℤ),b2⦂ℙ(COIN×ℤ)·b1∈COINBAG∧b2∈COINBAG⇒(b1 ↦ b2∈dom(bagdiff)⇔subbag(b2 ↦ b1)=TRUE)" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#set="/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPCoj(" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoj'" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicate name="PRD17" org.eventb.core.predicate="∀b1⦂ℙ(COIN×ℤ),b2⦂ℙ(COIN×ℤ)·b1∈COINBAG∧b2∈COINBAG∧subbag(b2 ↦ b1)=TRUE⇒bagdiff(b1 ↦ b2)={c⦂COIN·c∈COIN ∣ c ↦ b1(c) − b2(c)}" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#set8"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPCoj)" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoj(" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicate name="PRD18" org.eventb.core.predicate="∀b1⦂ℙ(COIN×ℤ),b2⦂ℙ(COIN×ℤ)·b1∈COINBAG∧b2∈COINBAG∧subbag(b2 ↦ b1)=TRUE⇒bagvalue(bagdiff(b1 ↦ b2))=bagvalue(b1) − bagvalue(b2)" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#set&gt;"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPCoj*" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoj)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD19" org.eventb.core.predicate="∀b1⦂ℙ(COIN×ℤ),b2⦂ℙ(COIN×ℤ)·b1∈COINBAG∧b2∈COINBAG∧subbag(b1 ↦ b2)=TRUE⇒bagvalue(b1)≤bagvalue(b2)" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setD"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPCoj," org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoj*" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD20" org.eventb.core.predicate="∀b1⦂ℙ(COIN×ℤ),b2⦂ℙ(COIN×ℤ)·b1∈COINBAG∧b2∈COINBAG⇒bagvalue(bagunion(b1 ↦ b2))=bagvalue(b1)+bagvalue(b2)" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setC"/>
+<org.eventb.core.poPredicate name="PRD21" org.eventb.core.predicate="addcoin∈COIN × COINBAG → COINBAG" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setE"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPCoj." org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoj," org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicate name="PRD22" org.eventb.core.predicate="∀c⦂COIN,b⦂ℙ(COIN×ℤ)·c∈COIN∧b∈COINBAG⇒addcoin(c ↦ b)=b{c ↦ b(c)+1}" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setF"/>
+<org.eventb.core.poPredicate name="PRD23" org.eventb.core.predicate="removecoin∈COIN × COINBAG → COINBAG" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setG"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPCoj/" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoj." org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicate name="PRD24" org.eventb.core.predicate="∀c⦂COIN,b⦂ℙ(COIN×ℤ)·c∈COIN∧b∈COINBAG∧b(c)≠0⇒c ↦ b∈dom(removecoin)" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setK"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPCoj0" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoj\/" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicate name="PRD25" org.eventb.core.predicate="∀c⦂COIN,b⦂ℙ(COIN×ℤ)·c∈COIN∧b∈COINBAG∧b(c)≠0⇒removecoin(c ↦ b)=b{c ↦ b(c) − 1}" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setJ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/RailTicket/CoinBag.bpo|org.eventb.core.poFile#CoinBag|org.eventb.core.poPredicateSet#HYPCoj0" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicate name="PRD26" org.eventb.core.predicate="∀c⦂COIN,b⦂ℙ(COIN×ℤ)·c∈COIN∧b∈COINBAG⇒bagvalue(addcoin(c ↦ b))=bagvalue(b)+CoinValue(c)" org.eventb.core.source="/RailTicket/CoinBag.buc|org.eventb.core.contextFile#CoinBag|org.eventb.core.axiom#setM"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

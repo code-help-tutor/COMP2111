@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="DIRECTION" org.eventb.core.type="ℙ(DIRECTION)"/>
+<org.eventb.core.poIdentifier name="LIFT" org.eventb.core.type="ℙ(LIFT)"/>
+<org.eventb.core.poIdentifier name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.poIdentifier name="CHANGE" org.eventb.core.type="ℙ(DIRECTION×DIRECTION)"/>
+<org.eventb.core.poIdentifier name="DOWN" org.eventb.core.type="DIRECTION"/>
+<org.eventb.core.poIdentifier name="FLOOR" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="IDLE" org.eventb.core.type="STATUS"/>
+<org.eventb.core.poIdentifier name="MAXFLOOR" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="MOVING" org.eventb.core.type="STATUS"/>
+<org.eventb.core.poIdentifier name="STOPPED" org.eventb.core.type="STATUS"/>
+<org.eventb.core.poIdentifier name="UP" org.eventb.core.type="DIRECTION"/>
+<org.eventb.core.poPredicate name="DIRECTIOO" org.eventb.core.predicate="MAXFLOOR∈ℕ1" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm1"/>
+<org.eventb.core.poPredicate name="DIRECTIOP" org.eventb.core.predicate="MAXFLOOR≥2" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#_RAc1wWe8Ed-6O_y_i4NrrV"/>
+<org.eventb.core.poPredicate name="DIRECTIOQ" org.eventb.core.predicate="FLOOR=0 ‥ MAXFLOOR" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm2"/>
+<org.eventb.core.poPredicate name="DIRECTIOR" org.eventb.core.predicate="finite(LIFT)" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm3"/>
+<org.eventb.core.poPredicate name="DIRECTIOS" org.eventb.core.predicate="partition(DIRECTION,{UP},{DOWN})" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm4"/>
+<org.eventb.core.poPredicate name="DIRECTIOT" org.eventb.core.predicate="partition(STATUS,{IDLE},{STOPPED},{MOVING})" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm5"/>
+<org.eventb.core.poPredicate name="DIRECTIOU" org.eventb.core.predicate="CHANGE∈DIRECTION ⤖ DIRECTION" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm6"/>
+<org.eventb.core.poPredicate name="DIRECTIOV" org.eventb.core.predicate="CHANGE={UP ↦ DOWN,DOWN ↦ UP}" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm7"/>
+<org.eventb.core.poPredicate name="DIRECTIOW" org.eventb.core.predicate="FLOOR≠(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm9"/>
+<org.eventb.core.poPredicate name="DIRECTIOX" org.eventb.core.predicate="finite(FLOOR)" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm10"/>
+<org.eventb.core.poPredicate name="DIRECTIOY" org.eventb.core.predicate="finite(STATUS)" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm11"/>
+<org.eventb.core.poPredicate name="DIRECTIOZ" org.eventb.core.predicate="finite(DIRECTION)" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm12"/>
+<org.eventb.core.poPredicate name="DIRECTIO[" org.eventb.core.predicate="finite(CHANGE)" org.eventb.core.source="/LiftController/Lift_ctx.buc|org.eventb.core.contextFile#Lift_ctx|org.eventb.core.axiom#axm13"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="liftdirection" org.eventb.core.type="ℙ(LIFT×DIRECTION)"/>
+<org.eventb.core.poIdentifier name="liftposition" org.eventb.core.type="ℙ(LIFT×ℤ)"/>
+<org.eventb.core.poIdentifier name="liftstatus" org.eventb.core.type="ℙ(LIFT×STATUS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="thm1/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_cty"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(liftposition)" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv2"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_cty"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="thm2/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_ct{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(liftstatus)" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv4"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_ct{"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="thm3/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_ct}"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(liftdirection)" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv6"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv6"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_ct}"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="inv4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_ct~"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·(l∈LIFT⇒l∈dom(liftposition)∧liftposition∈LIFT ⇸ ℤ)∧(l∈LIFT∧liftposition(l)=0⇒l∈dom(liftdirection)∧liftdirection∈LIFT ⇸ DIRECTION)" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv7"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv7"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_ct~"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="inv5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_cu'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·(l∈LIFT⇒l∈dom(liftposition)∧liftposition∈LIFT ⇸ ℤ)∧(l∈LIFT∧liftposition(l)=MAXFLOOR⇒l∈dom(liftdirection)∧liftdirection∈LIFT ⇸ DIRECTION)" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv8"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv8"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_cu'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="thm4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_cu("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·(l∈LIFT⇒l∈dom(liftdirection)∧liftdirection∈LIFT ⇸ DIRECTION)∧(l∈LIFT∧liftdirection(l)=DOWN⇒l∈dom(liftposition)∧liftposition∈LIFT ⇸ ℤ)" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv9"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv9"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_cu("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="thm4/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_cu("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·l∈LIFT∧liftdirection(l)=DOWN⇒liftposition(l)≠0" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv9"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv9"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_cu("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="thm5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_cu)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·(l∈LIFT⇒l∈dom(liftdirection)∧liftdirection∈LIFT ⇸ DIRECTION)∧(l∈LIFT∧liftdirection(l)=UP⇒l∈dom(liftposition)∧liftposition∈LIFT ⇸ ℤ)" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv10"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv10"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_cu)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="thm5/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_cu)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·l∈LIFT∧liftdirection(l)=UP⇒liftposition(l)≠MAXFLOOR" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv10"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv10"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_cu)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="thm6/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_cu*"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·(l∈LIFT⇒l∈dom(liftdirection)∧liftdirection∈LIFT ⇸ DIRECTION)∧(l∈LIFT∧liftdirection(l)=UP⇒l∈dom(liftposition)∧liftposition∈LIFT ⇸ ℤ)" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv11"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv11"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_cu*"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="thm6/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_cu*"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·l∈LIFT∧liftdirection(l)=UP⇒liftposition(l)+1≤MAXFLOOR" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv11"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv11"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_cu*"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTALLHYPliftdirectioo"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="LIFT × {0}∈LIFT → FLOOR" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv1"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_cty|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTALLHYPliftdirectioo"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="LIFT × {IDLE}∈LIFT → STATUS" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv3"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv3"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_ct{|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTALLHYPliftdirectioo"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="LIFT × {UP}∈LIFT → DIRECTION" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv5"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv5"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_ct}|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTALLHYPliftdirectioo"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·l∈LIFT∧(LIFT × {0})(l)=0⇒(LIFT × {UP})(l)=UP" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv7"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv7"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poSequent#INITIALISATION\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_cu'|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTALLHYPliftdirectioo"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·l∈LIFT∧(LIFT × {0})(l)=MAXFLOOR⇒(LIFT × {UP})(l)=DOWN" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv8"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv8"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poSequent#INITIALISATION\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_cu(|org.eventb.core.poPredicate#PRD7"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTliftdirectioo" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="liftposition'" org.eventb.core.type="ℙ(LIFT×ℤ)"/>
+<org.eventb.core.poIdentifier name="liftstatus'" org.eventb.core.type="ℙ(LIFT×STATUS)"/>
+<org.eventb.core.poIdentifier name="liftdirection'" org.eventb.core.type="ℙ(LIFT×DIRECTION)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPliftdirectioo" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTIDENTliftdirectioo" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poSequent name="IdleLift/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTIDENTliftdirectiop"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(liftstatus)∧liftstatus∈LIFT ⇸ STATUS" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt5|org.eventb.core.guard#internal_grd2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt5|org.eventb.core.guard#internal_grd2"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTIDENTliftdirectiop"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="IdleLift/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTALLHYPliftdirectiop"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="liftstatus{lift ↦ IDLE}∈LIFT → STATUS" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv3"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt5"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv3"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poSequent#IdleLift\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_ct{|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTliftdirectiop" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="lift" org.eventb.core.type="LIFT"/>
+<org.eventb.core.poIdentifier name="liftstatus'" org.eventb.core.type="ℙ(LIFT×STATUS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPliftdirectiop" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTIDENTliftdirectiop" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="liftstatus(lift)=STOPPED" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt5|org.eventb.core.guard#internal_grd2"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="ActivateLift/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTIDENTliftdirectioq"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(liftstatus)∧liftstatus∈LIFT ⇸ STATUS" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt6|org.eventb.core.guard#element2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt6|org.eventb.core.guard#element2"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTIDENTliftdirectioq"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ActivateLift/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTALLHYPliftdirectioq"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="liftstatus{lift ↦ STOPPED}∈LIFT → STATUS" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv3"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt6"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv3"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poSequent#ActivateLift\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_ct{|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTliftdirectioq" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="lift" org.eventb.core.type="LIFT"/>
+<org.eventb.core.poIdentifier name="liftstatus'" org.eventb.core.type="ℙ(LIFT×STATUS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPliftdirectioq" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTIDENTliftdirectioq" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="liftstatus(lift)=IDLE" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt6|org.eventb.core.guard#element2"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="StartLift/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTIDENTliftdirectior"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(liftstatus)∧liftstatus∈LIFT ⇸ STATUS" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt7|org.eventb.core.guard#internal_element1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt7|org.eventb.core.guard#internal_element1"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTIDENTliftdirectior"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="StartLift/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTALLHYPliftdirectior"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="liftstatus{lift ↦ MOVING}∈LIFT → STATUS" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv3"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt7"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv3"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poSequent#StartLift\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_ct{|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTliftdirectior" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="lift" org.eventb.core.type="LIFT"/>
+<org.eventb.core.poIdentifier name="liftstatus'" org.eventb.core.type="ℙ(LIFT×STATUS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPliftdirectior" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTIDENTliftdirectior" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="liftstatus(lift)=STOPPED" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt7|org.eventb.core.guard#internal_element1"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="ChangeDir/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTIDENTliftdirectios"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(liftstatus)∧liftstatus∈LIFT ⇸ STATUS" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt8|org.eventb.core.guard#internal_element1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt8|org.eventb.core.guard#internal_element1"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTIDENTliftdirectios"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ChangeDir/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTHYPliftdirectios'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(liftposition)∧liftposition∈LIFT ⇸ ℤ" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt8|org.eventb.core.guard#internal_element3"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt8|org.eventb.core.guard#internal_element3"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTHYPliftdirectios'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ChangeDir/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTHYPliftdirectios("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(liftposition)∧liftposition∈LIFT ⇸ ℤ" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt8|org.eventb.core.guard#internal_element4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt8|org.eventb.core.guard#internal_element4"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTHYPliftdirectios("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ChangeDir/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTALLHYPliftdirectios"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="liftdirection{lift ↦ CHANGE(liftdirection(lift))}∈LIFT → DIRECTION" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv5"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt8"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv5"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poSequent#ChangeDir\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_ct}|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ChangeDir/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTALLHYPliftdirectios"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·l∈LIFT∧liftposition(l)=0⇒(liftdirection{lift ↦ CHANGE(liftdirection(lift))})(l)=UP" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv7"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt8"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv7"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poSequent#ChangeDir\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_cu'|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ChangeDir/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTALLHYPliftdirectios"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·l∈LIFT∧liftposition(l)=MAXFLOOR⇒(liftdirection{lift ↦ CHANGE(liftdirection(lift))})(l)=DOWN" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv8"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt8"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv8"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poSequent#ChangeDir\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_cu(|org.eventb.core.poPredicate#PRD7"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="ChangeDir/act1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTALLHYPliftdirectios"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(liftdirection)∧liftdirection∈LIFT ⇸ DIRECTION∧liftdirection(lift)∈dom(CHANGE)∧CHANGE∈DIRECTION ⇸ DIRECTION" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt8|org.eventb.core.action#internal_element1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt8|org.eventb.core.action#internal_element1"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTALLHYPliftdirectios"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTliftdirectios" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="lift" org.eventb.core.type="LIFT"/>
+<org.eventb.core.poIdentifier name="liftdirection'" org.eventb.core.type="ℙ(LIFT×DIRECTION)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPliftdirectios'" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTIDENTliftdirectios" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="liftstatus(lift)=STOPPED" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt8|org.eventb.core.guard#internal_element1"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPliftdirectios(" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTHYPliftdirectios'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="liftposition(lift)≠0" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt8|org.eventb.core.guard#internal_element3"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPliftdirectios" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTHYPliftdirectios(" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="liftposition(lift)≠MAXFLOOR" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt8|org.eventb.core.guard#internal_element4"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="MoveUp/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTIDENTliftdirectiot"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(liftstatus)∧liftstatus∈LIFT ⇸ STATUS" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt10|org.eventb.core.guard#internal_element2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt10|org.eventb.core.guard#internal_element2"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTIDENTliftdirectiot"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MoveUp/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTHYPliftdirectiot'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(liftdirection)∧liftdirection∈LIFT ⇸ DIRECTION" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt10|org.eventb.core.guard#internal_element3"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt10|org.eventb.core.guard#internal_element3"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTHYPliftdirectiot'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MoveUp/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTALLHYPliftdirectiot"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="liftposition{lift ↦ liftposition(lift)+1}∈LIFT → FLOOR" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt10"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv1"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poSequent#MoveUp\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_cty|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MoveUp/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTALLHYPliftdirectiot">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="liftstatus'∈LIFT → STATUS∧(liftstatus'=liftstatus{lift ↦ MOVING}∨liftstatus'=liftstatus{lift ↦ STOPPED})" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt10|org.eventb.core.action#internal_element4"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="liftstatus'∈LIFT → STATUS" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv3"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt10"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv3"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poSequent#MoveUp\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_ct{|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MoveUp/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTALLHYPliftdirectiot">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="liftdirection'∈LIFT → DIRECTION∧(liftposition(lift)+1=MAXFLOOR⇒liftdirection'=liftdirection{lift ↦ DOWN})∧(liftposition(lift)+1≠MAXFLOOR⇒liftdirection'=liftdirection)" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt10|org.eventb.core.action#internal_element2"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="liftdirection'∈LIFT → DIRECTION" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv5"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt10"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv5"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poSequent#MoveUp\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_ct}|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MoveUp/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTALLHYPliftdirectiot">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="liftdirection'∈LIFT → DIRECTION∧(liftposition(lift)+1=MAXFLOOR⇒liftdirection'=liftdirection{lift ↦ DOWN})∧(liftposition(lift)+1≠MAXFLOOR⇒liftdirection'=liftdirection)" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt10|org.eventb.core.action#internal_element2"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·l∈LIFT∧(liftposition{lift ↦ liftposition(lift)+1})(l)=0⇒liftdirection'(l)=UP" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv7"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt10"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv7"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poSequent#MoveUp\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_cu'|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MoveUp/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTALLHYPliftdirectiot">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="liftdirection'∈LIFT → DIRECTION∧(liftposition(lift)+1=MAXFLOOR⇒liftdirection'=liftdirection{lift ↦ DOWN})∧(liftposition(lift)+1≠MAXFLOOR⇒liftdirection'=liftdirection)" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt10|org.eventb.core.action#internal_element2"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·l∈LIFT∧(liftposition{lift ↦ liftposition(lift)+1})(l)=MAXFLOOR⇒liftdirection'(l)=DOWN" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv8"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt10"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv8"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poSequent#MoveUp\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_cu(|org.eventb.core.poPredicate#PRD7"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MoveUp/act1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTALLHYPliftdirectiot"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(liftposition)∧liftposition∈LIFT ⇸ ℤ" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt10|org.eventb.core.action#internal_element1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt10|org.eventb.core.action#internal_element1"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTALLHYPliftdirectiot"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MoveUp/act2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTALLHYPliftdirectiot"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀liftdirection'⦂ℙ(LIFT×DIRECTION)·liftdirection'∈LIFT → DIRECTION⇒lift∈dom(liftposition)∧liftposition∈LIFT ⇸ ℤ" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt10|org.eventb.core.action#internal_element2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt10|org.eventb.core.action#internal_element2"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTALLHYPliftdirectiot"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MoveUp/act2/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTALLHYPliftdirectiot"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∃liftdirection'⦂ℙ(LIFT×DIRECTION)·liftdirection'∈LIFT → DIRECTION∧(liftposition(lift)+1=MAXFLOOR⇒liftdirection'=liftdirection{lift ↦ DOWN})∧(liftposition(lift)+1≠MAXFLOOR⇒liftdirection'=liftdirection)" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt10|org.eventb.core.action#internal_element2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt10|org.eventb.core.action#internal_element2"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTALLHYPliftdirectiot"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MoveUp/act3/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTALLHYPliftdirectiot"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∃liftstatus'⦂ℙ(LIFT×STATUS)·liftstatus'∈LIFT → STATUS∧(liftstatus'=liftstatus{lift ↦ MOVING}∨liftstatus'=liftstatus{lift ↦ STOPPED})" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt10|org.eventb.core.action#internal_element4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt10|org.eventb.core.action#internal_element4"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTALLHYPliftdirectiot"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTliftdirectiot" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="liftposition'" org.eventb.core.type="ℙ(LIFT×ℤ)"/>
+<org.eventb.core.poIdentifier name="lift" org.eventb.core.type="LIFT"/>
+<org.eventb.core.poIdentifier name="liftstatus'" org.eventb.core.type="ℙ(LIFT×STATUS)"/>
+<org.eventb.core.poIdentifier name="liftdirection'" org.eventb.core.type="ℙ(LIFT×DIRECTION)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPliftdirectiot'" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTIDENTliftdirectiot" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="liftstatus(lift)=MOVING" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt10|org.eventb.core.guard#internal_element2"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPliftdirectiot" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTHYPliftdirectiot'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="liftdirection(lift)=UP" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt10|org.eventb.core.guard#internal_element3"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="MoveDown/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTIDENTliftdirectiou"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(liftstatus)∧liftstatus∈LIFT ⇸ STATUS" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt12|org.eventb.core.guard#internal_element2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt12|org.eventb.core.guard#internal_element2"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTIDENTliftdirectiou"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MoveDown/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTHYPliftdirectiou'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(liftdirection)∧liftdirection∈LIFT ⇸ DIRECTION" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt12|org.eventb.core.guard#internal_element3"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt12|org.eventb.core.guard#internal_element3"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTHYPliftdirectiou'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MoveDown/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTALLHYPliftdirectiou"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="liftposition{lift ↦ liftposition(lift) − 1}∈LIFT → FLOOR" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt12"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv1"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poSequent#MoveDown\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_cty|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MoveDown/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTALLHYPliftdirectiou">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="liftstatus'∈LIFT → STATUS∧(liftstatus'=liftstatus{lift ↦ MOVING}∨liftstatus'=liftstatus{lift ↦ STOPPED})" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt12|org.eventb.core.action#internal_element4"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="liftstatus'∈LIFT → STATUS" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv3"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt12"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv3"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poSequent#MoveDown\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_ct{|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MoveDown/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTALLHYPliftdirectiou">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="liftdirection'∈LIFT → DIRECTION∧(liftposition(lift)=1⇒liftdirection'=liftdirection{lift ↦ UP})∧(liftposition(lift)≠1⇒liftdirection'=liftdirection)" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt12|org.eventb.core.action#internal_element2"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="liftdirection'∈LIFT → DIRECTION" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv5"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt12"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv5"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poSequent#MoveDown\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_ct}|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MoveDown/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTALLHYPliftdirectiou">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="liftdirection'∈LIFT → DIRECTION∧(liftposition(lift)=1⇒liftdirection'=liftdirection{lift ↦ UP})∧(liftposition(lift)≠1⇒liftdirection'=liftdirection)" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt12|org.eventb.core.action#internal_element2"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·l∈LIFT∧(liftposition{lift ↦ liftposition(lift) − 1})(l)=0⇒liftdirection'(l)=UP" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv7"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt12"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv7"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poSequent#MoveDown\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_cu'|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MoveDown/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTALLHYPliftdirectiou">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="liftdirection'∈LIFT → DIRECTION∧(liftposition(lift)=1⇒liftdirection'=liftdirection{lift ↦ UP})∧(liftposition(lift)≠1⇒liftdirection'=liftdirection)" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt12|org.eventb.core.action#internal_element2"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂LIFT·l∈LIFT∧(liftposition{lift ↦ liftposition(lift) − 1})(l)=MAXFLOOR⇒liftdirection'(l)=DOWN" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv8"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt12"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv8"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poSequent#MoveDown\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_cu(|org.eventb.core.poPredicate#PRD7"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MoveDown/act1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTALLHYPliftdirectiou"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="lift∈dom(liftposition)∧liftposition∈LIFT ⇸ ℤ" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt12|org.eventb.core.action#internal_element1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt12|org.eventb.core.action#internal_element1"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTALLHYPliftdirectiou"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MoveDown/act2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTALLHYPliftdirectiou"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀liftdirection'⦂ℙ(LIFT×DIRECTION)·liftdirection'∈LIFT → DIRECTION⇒lift∈dom(liftposition)∧liftposition∈LIFT ⇸ ℤ" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt12|org.eventb.core.action#internal_element2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt12|org.eventb.core.action#internal_element2"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTALLHYPliftdirectiou"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MoveDown/act2/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTALLHYPliftdirectiou"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∃liftdirection'⦂ℙ(LIFT×DIRECTION)·liftdirection'∈LIFT → DIRECTION∧(liftposition(lift)=1⇒liftdirection'=liftdirection{lift ↦ UP})∧(liftposition(lift)≠1⇒liftdirection'=liftdirection)" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt12|org.eventb.core.action#internal_element2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt12|org.eventb.core.action#internal_element2"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTALLHYPliftdirectiou"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MoveDown/act3/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTALLHYPliftdirectiou"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∃liftstatus'⦂ℙ(LIFT×STATUS)·liftstatus'∈LIFT → STATUS∧(liftstatus'=liftstatus{lift ↦ MOVING}∨liftstatus'=liftstatus{lift ↦ STOPPED})" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt12|org.eventb.core.action#internal_element4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt12|org.eventb.core.action#internal_element4"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTALLHYPliftdirectiou"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTliftdirectiou" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="liftposition'" org.eventb.core.type="ℙ(LIFT×ℤ)"/>
+<org.eventb.core.poIdentifier name="lift" org.eventb.core.type="LIFT"/>
+<org.eventb.core.poIdentifier name="liftstatus'" org.eventb.core.type="ℙ(LIFT×STATUS)"/>
+<org.eventb.core.poIdentifier name="liftdirection'" org.eventb.core.type="ℙ(LIFT×DIRECTION)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPliftdirectiou'" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTIDENTliftdirectiou" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="liftstatus(lift)=MOVING" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt12|org.eventb.core.guard#internal_element2"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPliftdirectiou" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#EVTHYPliftdirectiou'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="liftdirection(lift)=DOWN" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.event#evt12|org.eventb.core.guard#internal_element3"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLift_cty" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="liftposition∈LIFT → FLOOR" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv1"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLift_ct{" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_cty" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="finite(liftposition)" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv2"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="liftstatus∈LIFT → STATUS" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv3"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLift_ct}" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_ct{" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="finite(liftstatus)" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv4"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="liftdirection∈LIFT → DIRECTION" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv5"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLift_ct~" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_ct}" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="finite(liftdirection)" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv6"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLift_cu'" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_ct~" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="∀l⦂LIFT·l∈LIFT∧liftposition(l)=0⇒liftdirection(l)=UP" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv7"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLift_cu(" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_cu'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="∀l⦂LIFT·l∈LIFT∧liftposition(l)=MAXFLOOR⇒liftdirection(l)=DOWN" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv8"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLift_cu)" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_cu(" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="∀l⦂LIFT·l∈LIFT∧liftdirection(l)=DOWN⇒liftposition(l)≠0" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv9"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLift_cu*" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_cu)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="∀l⦂LIFT·l∈LIFT∧liftdirection(l)=UP⇒liftposition(l)≠MAXFLOOR" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv10"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/LiftController/BasicLift.bpo|org.eventb.core.poFile#BasicLift|org.eventb.core.poPredicateSet#HYPLift_cu*" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="∀l⦂LIFT·l∈LIFT∧liftdirection(l)=UP⇒liftposition(l)+1≤MAXFLOOR" org.eventb.core.source="/LiftController/BasicLift.bum|org.eventb.core.machineFile#BasicLift|org.eventb.core.invariant#inv11"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

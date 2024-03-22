@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd;org.animb.valuation.valBase">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="finite(MEMBER)" org.eventb.core.source="/Library/Library_ctx.buc|org.eventb.core.contextFile#Library_ctx|org.eventb.core.axiom#axm1A" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="finite(BOOK)" org.eventb.core.source="/Library/Library_ctx.buc|org.eventb.core.contextFile#Library_ctx|org.eventb.core.axiom#axm2A" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name=")" org.eventb.core.label="axm3" org.eventb.core.predicate="maxloan∈ℕ1" org.eventb.core.source="/Library/Library_ctx.buc|org.eventb.core.contextFile#Library_ctx|org.eventb.core.axiom#__-UCMFzWEeC23oZAk6yf5g" org.eventb.core.theorem="false"/>
+<org.eventb.core.scCarrierSet name="BOOK" org.eventb.core.source="/Library/Library_ctx.buc|org.eventb.core.contextFile#Library_ctx|org.eventb.core.carrierSet#set2" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.scCarrierSet name="MEMBER" org.eventb.core.source="/Library/Library_ctx.buc|org.eventb.core.contextFile#Library_ctx|org.eventb.core.carrierSet#set1" org.eventb.core.type="ℙ(MEMBER)"/>
+<org.eventb.core.scConstant name="maxloan" org.eventb.core.source="/Library/Library_ctx.buc|org.eventb.core.contextFile#Library_ctx|org.eventb.core.constant#__-TbIFzWEeC23oZAk6yf5g" org.eventb.core.type="ℤ"/>
+</org.eventb.core.scContextFile>

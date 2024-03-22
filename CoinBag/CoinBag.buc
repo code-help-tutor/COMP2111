@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;org.animb.valuation.valBase" version="3">
+<org.eventb.core.axiom name="axm3" org.eventb.core.comment="" org.eventb.core.label="axm1" org.eventb.core.predicate="COINBAG = COIN → ℕ "/>
+<org.eventb.core.axiom name="setL" org.eventb.core.comment="" org.eventb.core.label="axm2" org.eventb.core.predicate="∀b·b ∈ COINBAG&#10;⇒ b = {c·⊤ ∣ c ↦ b(c)}" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="axm4" org.eventb.core.comment="" org.eventb.core.label="axm3" org.eventb.core.predicate="bagvalue ∈ COINBAG → ℕ"/>
+<org.eventb.core.axiom name="axm5" org.eventb.core.comment="" org.eventb.core.label="axm4" org.eventb.core.predicate="∀b,c·b ∈ COINBAG ∧ c ∈ dom(b)&#10;⇒ bagvalue(b) = b(c)∗CoinValue(c) + bagvalue(b  {c ↦ 0})"/>
+<org.eventb.core.axiom name="axm6" org.eventb.core.comment="" org.eventb.core.label="axm5" org.eventb.core.predicate="∀b·b ∈ COINBAG ∧ (b ≠ ∅ ⇒ ran(b) = {0})&#10;⇒ bagvalue(b) = 0"/>
+<org.eventb.core.axiom name="set:" org.eventb.core.comment="" org.eventb.core.label="axm6" org.eventb.core.predicate="emptybag = COIN × {0}"/>
+<org.eventb.core.axiom name="set;" org.eventb.core.label="axm7" org.eventb.core.predicate="bagvalue(emptybag) = 0" org.eventb.core.theorem="true"/>
+<org.eventb.core.constant name="cst2" org.eventb.core.comment="" org.eventb.core.identifier="COINBAG"/>
+<org.eventb.core.constant name="cst3" org.eventb.core.comment="" org.eventb.core.identifier="bagvalue"/>
+<org.eventb.core.extendsContext name="set2" org.eventb.core.target="Coin"/>
+<org.eventb.core.constant name="set9" org.eventb.core.identifier="emptybag"/>
+<org.eventb.core.constant name="cst4" org.eventb.core.comment="" org.eventb.core.identifier="bagunion"/>
+<org.eventb.core.constant name="set3" org.eventb.core.identifier="subbag"/>
+<org.eventb.core.constant name="set4" org.eventb.core.comment="" org.eventb.core.identifier="bagdiff"/>
+<org.eventb.core.axiom name="axm7" org.eventb.core.comment="" org.eventb.core.label="axm8" org.eventb.core.predicate="bagunion ∈ COINBAG × COINBAG → COINBAG"/>
+<org.eventb.core.axiom name="axm8" org.eventb.core.label="axm9" org.eventb.core.predicate="∀b1,b2·b1 ∈ COINBAG ∧ b2 ∈ COINBAG&#10;⇒ bagunion(b1 ↦ b2) = {c·c ∈ COIN ∣ c ↦ b1(c)+b2(c)}"/>
+<org.eventb.core.axiom name="set@" org.eventb.core.label="axm10" org.eventb.core.predicate="∀b1,b2·b1 ∈ COINBAG ∧ b2 ∈ COINBAG&#10;⇒ bagunion(b1 ↦ b2) = bagunion(b2 ↦ b1)" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="setA" org.eventb.core.comment="" org.eventb.core.label="axm11" org.eventb.core.predicate="∀b·b ∈ COINBAG&#10;⇒ bagunion(emptybag ↦ b) = b" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="setB" org.eventb.core.comment="" org.eventb.core.label="axm12" org.eventb.core.predicate="∀b·b ∈ COINBAG ⇒ bagvalue(emptybag  b) = bagvalue(b)" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="set5" org.eventb.core.label="axm13" org.eventb.core.predicate="subbag ∈ COINBAG × COINBAG → BOOL"/>
+<org.eventb.core.axiom name="set6" org.eventb.core.label="axm14" org.eventb.core.predicate="∀b1,b2·b1 ∈ COINBAG ∧ b2 ∈ COINBAG &#10;∧ ((∀c·c ∈ COIN ∧ b1(c) ≤ b2(c)) ⇔ subbag(b1 ↦ b2) = TRUE)"/>
+<org.eventb.core.axiom name="set?" org.eventb.core.comment="" org.eventb.core.label="axm15" org.eventb.core.predicate="∀b·b ∈ COINBAG ⇒ subbag(emptybag ↦ b) = TRUE" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="set7" org.eventb.core.label="axm16" org.eventb.core.predicate="bagdiff ∈ COINBAG × COINBAG ⇸ COINBAG"/>
+<org.eventb.core.axiom name="set=" org.eventb.core.label="axm17" org.eventb.core.predicate="∀b1,b2·b1 ∈ COINBAG ∧ b2 ∈ COINBAG&#10;⇒ (b1 ↦ b2 ∈ dom(bagdiff) ⇔ subbag(b2 ↦ b1) = TRUE)"/>
+<org.eventb.core.axiom name="set8" org.eventb.core.label="axm18" org.eventb.core.predicate="∀b1,b2·b1 ∈ COINBAG ∧ b2 ∈ COINBAG ∧ subbag(b2 ↦ b1) = TRUE&#10;⇒ bagdiff(b1 ↦ b2) = {c·c ∈ COIN ∣ c ↦ b1(c) − b2(c)}"/>
+<org.eventb.core.axiom name="set&gt;" org.eventb.core.label="axm19" org.eventb.core.predicate="∀b1,b2·b1 ∈ COINBAG ∧ b2 ∈ COINBAG ∧ subbag(b2 ↦ b1) = TRUE&#10;⇒ bagvalue(bagdiff(b1 ↦ b2)) = bagvalue(b1) − bagvalue(b2)"/>
+<org.eventb.core.axiom name="setD" org.eventb.core.label="axm20" org.eventb.core.predicate="∀b1,b2·b1 ∈ COINBAG ∧ b2 ∈ COINBAG ∧ subbag(b1 ↦ b2) = TRUE&#10;⇒ bagvalue(b1) ≤ bagvalue(b2)" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="setC" org.eventb.core.label="axm21" org.eventb.core.predicate="∀b1,b2·b1 ∈ COINBAG ∧ b2 ∈ COINBAG&#10;⇒ bagvalue(bagunion(b1 ↦ b2)) = bagvalue(b1) + bagvalue(b2)" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="setE" org.eventb.core.label="axm22" org.eventb.core.predicate="addcoin ∈ COIN × COINBAG → COINBAG"/>
+<org.eventb.core.axiom name="setF" org.eventb.core.comment="" org.eventb.core.label="axm23" org.eventb.core.predicate="∀c,b·c ∈ COIN ∧ b ∈ COINBAG&#10;⇒ addcoin(c ↦ b) = b  {c ↦ b(c)+1}"/>
+<org.eventb.core.axiom name="setG" org.eventb.core.label="axm24" org.eventb.core.predicate="removecoin ∈ (COIN × COINBAG) → COINBAG"/>
+<org.eventb.core.constant name="setH" org.eventb.core.comment="" org.eventb.core.identifier="addcoin"/>
+<org.eventb.core.constant name="setI" org.eventb.core.comment="" org.eventb.core.identifier="removecoin"/>
+<org.eventb.core.axiom name="setK" org.eventb.core.comment="" org.eventb.core.label="axm25" org.eventb.core.predicate="∀c,b·c ∈ COIN ∧ b ∈ COINBAG ∧ b(c) ≠ 0&#10;⇒ c ↦ b ∈ dom(removecoin)" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="setJ" org.eventb.core.label="axm26" org.eventb.core.predicate="∀c,b·c ∈ COIN ∧ b ∈ COINBAG ∧ b(c) ≠ 0&#10;⇒ removecoin(c ↦ b) = b  {c ↦ b(c)−1}"/>
+<org.eventb.core.axiom name="setM" org.eventb.core.label="axm27" org.eventb.core.predicate="∀c,b·c ∈ COIN ∧ b ∈ COINBAG&#10;⇒ bagvalue(addcoin(c ↦ b)) = bagvalue(b) + CoinValue(c)"/>
+</org.eventb.core.contextFile>

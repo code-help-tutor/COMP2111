@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;org.animb.valuation.valBase" org.eventb.texttools.text_lastmodified="1274801954415" org.eventb.texttools.text_representation="context Buttons_ctx&#13;&#13;constants ON OFF&#13;&#13;sets BUTTONS&#13;&#13;axioms&#13;  @axm1 partition(BUTTONS, {ON}, {OFF})&#13;end&#13;" version="3">
+<org.eventb.core.carrierSet name="set1" org.eventb.core.identifier="BUTTON"/>
+<org.eventb.core.constant name="cst1" org.eventb.core.identifier="ON"/>
+<org.eventb.core.constant name="cst2" org.eventb.core.identifier="OFF"/>
+<org.eventb.core.axiom name="axm1" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(BUTTON, {ON}, {OFF})"/>
+</org.eventb.core.contextFile>

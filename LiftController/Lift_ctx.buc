@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;org.animb.valuation.valBase" org.eventb.texttools.text_lastmodified="1274764413468" org.eventb.texttools.text_representation="context Lift_ctx&#13;&#13;constants MAXFLOOR FLOOR UP DOWN IDLE STOPPED WAITING MOVING CHANGE&#13;&#13;sets DIRECTION STATUS LIFT&#13;&#13;axioms&#13;  @axm1 MAXFLOOR ∈ ℕ1&#13;  @axm2 FLOOR = 0‥MAXFLOOR&#13;  @axm3 finite(LIFT)&#13;  @axm4 partition(DIRECTION,{UP}, {DOWN})&#13;  @axm5 partition(STATUS, {IDLE}, {STOPPED}, {WAITING}, {MOVING})&#13;  @axm6 CHANGE ∈ DIRECTION ⤖ DIRECTION&#13;  @axm7 CHANGE = {UP ↦ DOWN, DOWN ↦ UP}&#13;  theorem @thm1 FLOOR ≠ ∅&#13;  theorem @thm2 finite(FLOOR)&#13;  theorem @thm3 finite(STATUS)&#13;  theorem @thm4 finite(DIRECTION)&#13;  theorem @thm5 finite(CHANGE)&#13;end&#13;" version="3">
+<org.eventb.core.carrierSet name="set1" org.eventb.core.identifier="DIRECTION"/>
+<org.eventb.core.carrierSet name="set2" org.eventb.core.identifier="STATUS"/>
+<org.eventb.core.carrierSet name="set3" org.eventb.core.identifier="LIFT"/>
+<org.eventb.core.constant name="cst1" org.eventb.core.identifier="MAXFLOOR"/>
+<org.eventb.core.constant name="cst2" org.eventb.core.identifier="FLOOR"/>
+<org.eventb.core.constant name="cst3" org.eventb.core.identifier="UP"/>
+<org.eventb.core.constant name="cst4" org.eventb.core.identifier="DOWN"/>
+<org.eventb.core.constant name="cst5" org.eventb.core.identifier="IDLE"/>
+<org.eventb.core.constant name="cst6" org.eventb.core.identifier="STOPPED"/>
+<org.eventb.core.constant name="cst7" org.eventb.core.comment="" org.eventb.core.identifier="MOVING"/>
+<org.eventb.core.constant name="cst8" org.eventb.core.comment="" org.eventb.core.identifier="CHANGE"/>
+<org.eventb.core.axiom name="axm1" org.eventb.core.label="axm1" org.eventb.core.predicate="MAXFLOOR ∈ ℕ1"/>
+<org.eventb.core.axiom name="_RAc1wWe8Ed-6O_y_i4NrrV" org.eventb.core.label="axm2" org.eventb.core.predicate="MAXFLOOR ≥ 2"/>
+<org.eventb.core.axiom name="axm2" org.eventb.core.label="axm3" org.eventb.core.predicate="FLOOR = 0‥MAXFLOOR"/>
+<org.eventb.core.axiom name="axm3" org.eventb.core.label="axm4" org.eventb.core.predicate="finite(LIFT)"/>
+<org.eventb.core.axiom name="axm4" org.eventb.core.label="axm5" org.eventb.core.predicate="partition(DIRECTION,{UP}, {DOWN})"/>
+<org.eventb.core.axiom name="axm5" org.eventb.core.label="axm6" org.eventb.core.predicate="partition(STATUS, {IDLE}, {STOPPED}, {MOVING})"/>
+<org.eventb.core.axiom name="axm6" org.eventb.core.label="axm7" org.eventb.core.predicate="CHANGE ∈ DIRECTION ⤖ DIRECTION"/>
+<org.eventb.core.axiom name="axm7" org.eventb.core.label="axm8" org.eventb.core.predicate="CHANGE = {UP ↦ DOWN, DOWN ↦ UP}"/>
+<org.eventb.core.axiom name="axm9" org.eventb.core.label="thm1" org.eventb.core.predicate="FLOOR ≠ ∅" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="axm10" org.eventb.core.label="thm2" org.eventb.core.predicate="finite(FLOOR)" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="axm11" org.eventb.core.label="thm3" org.eventb.core.predicate="finite(STATUS)" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="axm12" org.eventb.core.label="thm4" org.eventb.core.predicate="finite(DIRECTION)" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="axm13" org.eventb.core.label="thm5" org.eventb.core.predicate="finite(CHANGE)" org.eventb.core.theorem="true"/>
+<org.animb.valuation.value name="_RAc1wWe8Ed-6O_y_i4NrrT" org.eventb.core.expression="3" org.eventb.core.identifier="MAXFLOOR"/>
+<org.animb.valuation.value name="_RAc1wWe8Ed-6O_y_i4NrrR" org.eventb.core.expression="{0,1,2,3}" org.eventb.core.identifier="FLOOR"/>
+<org.animb.valuation.value name="_RAc1wWe8Ed-6O_y_i4NrrS" org.eventb.core.expression="{l1,l2,l3}" org.eventb.core.identifier="LIFT"/>
+<org.animb.valuation.value name="_RAc1wWe8Ed-6O_y_i4NrrU" org.eventb.core.expression="{UP ↦ DOWN, DOWN ↦ UP}" org.eventb.core.identifier="CHANGE"/>
+</org.eventb.core.contextFile>

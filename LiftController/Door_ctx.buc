@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;org.animb.valuation.valBase" org.eventb.texttools.text_lastmodified="1318508099844" org.eventb.texttools.text_representation="context Door_ctx&#10;&#10;constants OPEN CLOSED&#10;&#10;sets DOOR&#10;&#10;axioms&#10;  @axm1 partition(DOOR, {OPEN}, {CLOSED})&#10;end&#10;" version="3">
+<org.eventb.core.carrierSet name="set1" org.eventb.core.identifier="DOOR"/>
+<org.eventb.core.constant name="cst1" org.eventb.core.identifier="OPEN"/>
+<org.eventb.core.constant name="cst2" org.eventb.core.identifier="CLOSED"/>
+<org.eventb.core.axiom name="axm1" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(DOOR, {OPEN}, {CLOSED})"/>
+</org.eventb.core.contextFile>

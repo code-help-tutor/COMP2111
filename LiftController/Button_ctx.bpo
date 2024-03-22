@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="BUTTON" org.eventb.core.type="ℙ(BUTTON)"/>
+<org.eventb.core.poIdentifier name="OFF" org.eventb.core.type="BUTTON"/>
+<org.eventb.core.poIdentifier name="ON" org.eventb.core.type="BUTTON"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/LiftController/Button_ctx.bpo|org.eventb.core.poFile#Button_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="partition(BUTTON,{ON},{OFF})" org.eventb.core.source="/LiftController/Button_ctx.buc|org.eventb.core.contextFile#Button_ctx|org.eventb.core.axiom#axm1"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

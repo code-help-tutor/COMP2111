@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.poIdentifier name="MEMBER" org.eventb.core.type="ℙ(MEMBER)"/>
+<org.eventb.core.poIdentifier name="maxloan" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="maxloao" org.eventb.core.predicate="finite(MEMBER)" org.eventb.core.source="/Library/Library_ctx.buc|org.eventb.core.contextFile#Library_ctx|org.eventb.core.axiom#axm1A"/>
+<org.eventb.core.poPredicate name="maxloap" org.eventb.core.predicate="finite(BOOK)" org.eventb.core.source="/Library/Library_ctx.buc|org.eventb.core.contextFile#Library_ctx|org.eventb.core.axiom#axm2A"/>
+<org.eventb.core.poPredicate name="maxloaq" org.eventb.core.predicate="maxloan∈ℕ1" org.eventb.core.source="/Library/Library_ctx.buc|org.eventb.core.contextFile#Library_ctx|org.eventb.core.axiom#__-UCMFzWEeC23oZAk6yf5g"/>
+<org.eventb.core.poIdentifier name="APPEND" org.eventb.core.type="ℙ(ℙ(ℤ×MEMBER)×MEMBER×ℙ(ℤ×MEMBER))"/>
+<org.eventb.core.poIdentifier name="DELETE" org.eventb.core.type="ℙ(ℙ(ℤ×MEMBER)×ℤ×ℙ(ℤ×MEMBER))"/>
+<org.eventb.core.poIdentifier name="DEQUEUE" org.eventb.core.type="ℙ(ℙ(ℤ×MEMBER)×ℙ(ℤ×MEMBER))"/>
+<org.eventb.core.poIdentifier name="IAPPEND" org.eventb.core.type="ℙ(ℙ(ℤ×MEMBER)×MEMBER×ℙ(ℤ×MEMBER))"/>
+<org.eventb.core.poIdentifier name="IDELETE" org.eventb.core.type="ℙ(ℙ(ℤ×MEMBER)×MEMBER×ℙ(ℤ×MEMBER))"/>
+<org.eventb.core.poIdentifier name="ILIST" org.eventb.core.type="ℙ(ℙ(ℤ×MEMBER))"/>
+<org.eventb.core.poIdentifier name="JOIN" org.eventb.core.type="ℙ(ℙ(ℤ×MEMBER)×ℙ(ℤ×MEMBER)×ℙ(ℤ×MEMBER))"/>
+<org.eventb.core.poIdentifier name="LENGTH" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="LIST" org.eventb.core.type="ℙ(ℙ(ℤ×MEMBER))"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="axm2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cty"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER)·l∈ℕ1 ⇸ MEMBER⇒finite(l)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm2"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cty"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm3/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_ct{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ℤ×MEMBER))∈LIST" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm3"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm3"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_ct{"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm5/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_ct}"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ILIST⊂LIST" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm5"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm5"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_ct}"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm7/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER)·l∈ILIST⇔l∈LIST∧l∈1 ‥ LENGTH ⤔ MEMBER" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm7"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm7"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm8/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER)·l∈LIST⇒ran(l)=l[dom(l)]" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm8"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm8"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm9/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER)·l∈LIST⇒finite(l)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm9"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm9"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm9/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER)·l∈LIST⇒ran(l)=l[1 ‥ card(l)]" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm9"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm9"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm10/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu*"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER)·l∈LIST⇒finite(ran(l))∧finite(dom(l))" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#element4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#element4"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu*"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm10/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu*"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER)·l∈LIST∧card(ran(l))=card(dom(l))⇒l∈ILIST" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#element4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#element4"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu*"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm12/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu,"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(JOIN)=LIST × LIST" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm11"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm11"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu,"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm13/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu-"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l1⦂ℙ(ℤ×MEMBER),l2⦂ℙ(ℤ×MEMBER)·l1∈LIST∧l2∈LIST⇒l1 ↦ l2∈dom(JOIN)∧JOIN∈ℙ(ℤ × MEMBER) × ℙ(ℤ × MEMBER) ⇸ ℙ(ℤ × MEMBER)∧finite(l1)∧finite(l2)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm12"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm12"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu-"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm14/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu."/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l1⦂ℙ(ℤ×MEMBER),l2⦂ℙ(ℤ×MEMBER),i⦂ℤ·(l1∈LIST∧l2∈LIST⇒l1 ↦ l2∈dom(JOIN)∧JOIN∈ℙ(ℤ × MEMBER) × ℙ(ℤ × MEMBER) ⇸ ℙ(ℤ × MEMBER))∧(l1∈LIST∧l2∈LIST∧i∈dom(JOIN(l1 ↦ l2))⇒finite(l1)∧(i∈1 ‥ card(l1)⇒JOIN(l1 ↦ l2)∈ℤ ⇸ MEMBER∧i∈dom(l1)∧l1∈ℤ ⇸ MEMBER)∧((i∈1 ‥ card(l1)⇒JOIN(l1 ↦ l2)(i)=l1(i))⇒finite(l2)∧(i − card(l1)∈1 ‥ card(l2)⇒JOIN(l1 ↦ l2)∈ℤ ⇸ MEMBER∧i − card(l1)∈dom(l2)∧l2∈ℤ ⇸ MEMBER)))" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm13"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm13"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu."/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm15/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu\/"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER)·l∈LIST⇒l ↦ (∅ ⦂ ℙ(ℤ×MEMBER))∈dom(JOIN)∧JOIN∈ℙ(ℤ × MEMBER) × ℙ(ℤ × MEMBER) ⇸ ℙ(ℤ × MEMBER)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#element2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#element2"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu\/"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm15/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu\/"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER)·l∈LIST⇒JOIN(l ↦ (∅ ⦂ ℙ(ℤ×MEMBER)))=l" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#element2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#element2"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu\/"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm16/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu0"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER)·l∈LIST⇒(∅ ⦂ ℙ(ℤ×MEMBER)) ↦ l∈dom(JOIN)∧JOIN∈ℙ(ℤ × MEMBER) × ℙ(ℤ × MEMBER) ⇸ ℙ(ℤ × MEMBER)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#element3"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#element3"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm16/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu0"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER)·l∈LIST⇒JOIN((∅ ⦂ ℙ(ℤ×MEMBER)) ↦ l)=l" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#element3"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#element3"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm17/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu1"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l1⦂ℙ(ℤ×MEMBER),l2⦂ℙ(ℤ×MEMBER)·l1∈ILIST∧l2∈ILIST∧ran(l1)∩ran(l2)=(∅ ⦂ ℙ(MEMBER))⇒l1 ↦ l2∈dom(JOIN)∧JOIN∈ℙ(ℤ × MEMBER) × ℙ(ℤ × MEMBER) ⇸ ℙ(ℤ × MEMBER)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm14"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm14"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm17/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu1"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l1⦂ℙ(ℤ×MEMBER),l2⦂ℙ(ℤ×MEMBER)·l1∈ILIST∧l2∈ILIST∧ran(l1)∩ran(l2)=(∅ ⦂ ℙ(MEMBER))⇒JOIN(l1 ↦ l2)∈ILIST" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm14"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm14"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm18/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu2"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l1⦂ℙ(ℤ×MEMBER),l2⦂ℙ(ℤ×MEMBER)·l1∈LIST∧l2∈LIST⇒l1 ↦ l2∈dom(JOIN)∧JOIN∈ℙ(ℤ × MEMBER) × ℙ(ℤ × MEMBER) ⇸ ℙ(ℤ × MEMBER)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm15"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm15"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm18/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu2"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l1⦂ℙ(ℤ×MEMBER),l2⦂ℙ(ℤ×MEMBER)·l1∈LIST∧l2∈LIST⇒ran(JOIN(l1 ↦ l2))=ran(l1)∪ran(l2)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm15"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm15"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm19/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu3"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l1⦂ℙ(ℤ×MEMBER),l2⦂ℙ(ℤ×MEMBER)·l1∈LIST∧l2∈LIST⇒l1 ↦ l2∈dom(JOIN)∧JOIN∈ℙ(ℤ × MEMBER) × ℙ(ℤ × MEMBER) ⇸ ℙ(ℤ × MEMBER)∧finite(JOIN(l1 ↦ l2))∧finite(l1)∧finite(l2)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm16"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm16"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm19/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu3"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l1⦂ℙ(ℤ×MEMBER),l2⦂ℙ(ℤ×MEMBER)·l1∈LIST∧l2∈LIST⇒card(JOIN(l1 ↦ l2))=card(l1)+card(l2)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm16"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm16"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm21/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu5"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(APPEND)=LIST × MEMBER" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm18"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm18"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm22/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu6"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),m⦂MEMBER·l∈LIST⇒l ↦ m∈dom(APPEND)∧APPEND∈ℙ(ℤ × MEMBER) × MEMBER ⇸ ℙ(ℤ × MEMBER)∧finite(l)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm19"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm19"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm23/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu7"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),m⦂MEMBER,i⦂ℤ·(l∈LIST⇒l ↦ m∈dom(APPEND)∧APPEND∈ℙ(ℤ × MEMBER) × MEMBER ⇸ ℙ(ℤ × MEMBER))∧(l∈LIST∧i∈dom(APPEND(l ↦ m))⇒(i∈dom(l)⇒APPEND(l ↦ m)∈ℤ ⇸ MEMBER∧l∈ℤ ⇸ MEMBER)∧((i∈dom(l)⇒APPEND(l ↦ m)(i)=l(i))⇒finite(l)∧(i=card(l)+1⇒APPEND(l ↦ m)∈ℤ ⇸ MEMBER)))" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm20"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm20"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu7"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm24/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu8"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),m⦂MEMBER·l∈LIST∧m∈MEMBER⇒l ↦ m∈dom(APPEND)∧APPEND∈ℙ(ℤ × MEMBER) × MEMBER ⇸ ℙ(ℤ × MEMBER)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm21"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm21"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu8"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm24/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu8"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),m⦂MEMBER·l∈LIST∧m∈MEMBER⇒ran(APPEND(l ↦ m))=ran(l)∪{m}" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm21"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm21"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu8"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm25/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu9"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),m⦂MEMBER·l∈LIST∧m∈MEMBER⇒l ↦ m∈dom(APPEND)∧APPEND∈ℙ(ℤ × MEMBER) × MEMBER ⇸ ℙ(ℤ × MEMBER)∧finite(APPEND(l ↦ m))∧finite(l)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm22"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm22"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu9"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm25/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu9"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),m⦂MEMBER·l∈LIST∧m∈MEMBER⇒card(APPEND(l ↦ m))=card(l)+1" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm22"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm22"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu9"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm26/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu:"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),m⦂MEMBER·l∈ILIST∧m∈MEMBER∧m∉ran(l)⇒l ↦ m∈dom(APPEND)∧APPEND∈ℙ(ℤ × MEMBER) × MEMBER ⇸ ℙ(ℤ × MEMBER)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm23"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm23"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu:"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm26/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu:"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),m⦂MEMBER·l∈ILIST∧m∈MEMBER∧m∉ran(l)⇒APPEND(l ↦ m)∈ILIST" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm23"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm23"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu:"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm28/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu="/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(IAPPEND)=ILIST × MEMBER" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm25"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm25"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu="/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm29/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu&gt;"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),m⦂MEMBER·l∈LIST⇒l ↦ m∈dom(IAPPEND)∧IAPPEND∈ℙ(ℤ × MEMBER) × MEMBER ⇸ ℙ(ℤ × MEMBER)∧l ↦ m∈dom(APPEND)∧APPEND∈ℙ(ℤ × MEMBER) × MEMBER ⇸ ℙ(ℤ × MEMBER)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm26"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm26"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu&gt;"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm30/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu?"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),m⦂MEMBER·l∈ILIST∧m∉ran(l)⇒l ↦ m∈dom(IAPPEND)∧IAPPEND∈ℙ(ℤ × MEMBER) × MEMBER ⇸ ℙ(ℤ × MEMBER)∧l ↦ m∈dom(APPEND)∧APPEND∈ℙ(ℤ × MEMBER) × MEMBER ⇸ ℙ(ℤ × MEMBER)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm27"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm27"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu?"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm31/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu@"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),m⦂MEMBER·l∈LIST∧m∈MEMBER⇒l ↦ m∈dom(APPEND)∧APPEND∈ℙ(ℤ × MEMBER) × MEMBER ⇸ ℙ(ℤ × MEMBER)∧finite(APPEND(l ↦ m))∧finite(l)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm28"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm28"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu@"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm31/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu@"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),m⦂MEMBER·l∈LIST∧m∈MEMBER⇒card(APPEND(l ↦ m))=card(l)+1" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm28"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm28"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu@"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm33/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuB"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(DEQUEUE)=LIST" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm30"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm30"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuB"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm34/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuC"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER)·l∈LIST∧l≠(∅ ⦂ ℙ(ℤ×MEMBER))⇒l∈dom(DEQUEUE)∧DEQUEUE∈ℙ(ℤ × MEMBER) ⇸ ℙ(ℤ × MEMBER)∧finite(l)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm31"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm31"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuC"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm35/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuD"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),i⦂ℤ·(l∈LIST∧l≠(∅ ⦂ ℙ(ℤ×MEMBER))⇒finite(l))∧(l∈LIST∧l≠(∅ ⦂ ℙ(ℤ×MEMBER))∧i∈1 ‥ card(l) − 1⇒l∈dom(DEQUEUE)∧DEQUEUE∈ℙ(ℤ × MEMBER) ⇸ ℙ(ℤ × MEMBER)∧i∈dom(DEQUEUE(l))∧DEQUEUE(l)∈ℤ ⇸ MEMBER∧i+1∈dom(l)∧l∈ℤ ⇸ MEMBER)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm32"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm32"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuD"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm36/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuE"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER)·l∈ILIST∧l≠(∅ ⦂ ℙ(ℤ×MEMBER))⇒l∈dom(DEQUEUE)∧DEQUEUE∈ℙ(ℤ × MEMBER) ⇸ ℙ(ℤ × MEMBER)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm33"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm33"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuE"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm36/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuE"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER)·l∈ILIST∧l≠(∅ ⦂ ℙ(ℤ×MEMBER))⇒DEQUEUE(l)∈ILIST" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm33"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm33"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuE"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm37/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuF"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER)·l∈LIST∧l≠(∅ ⦂ ℙ(ℤ×MEMBER))⇒l∈dom(DEQUEUE)∧DEQUEUE∈ℙ(ℤ × MEMBER) ⇸ ℙ(ℤ × MEMBER)∧1∈dom(l)∧l∈ℤ ⇸ MEMBER" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm34"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm34"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuF"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm37/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuF"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER)·l∈LIST∧l≠(∅ ⦂ ℙ(ℤ×MEMBER))⇒ran(DEQUEUE(l))=ran(l) ∖ {l(1)}" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm34"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm34"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuF"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm39/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuH"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="dom(DELETE)⊆LIST × 1 ‥ LENGTH" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm36"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm36"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuH"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm41/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuJ"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),i⦂ℤ·l∈LIST∧i∈dom(l)⇒l ↦ i∈dom(DELETE)∧DELETE∈ℙ(ℤ × MEMBER) × ℤ ⇸ ℙ(ℤ × MEMBER)∧finite(l)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm38"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm38"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuJ"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm42/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuK"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),i⦂ℤ,j⦂ℤ·(l∈LIST∧i∈dom(l)⇒finite(l))∧(l∈LIST∧i∈dom(l)∧j∈1 ‥ card(l) − 1⇒l ↦ i∈dom(DELETE)∧DELETE∈ℙ(ℤ × MEMBER) × ℤ ⇸ ℙ(ℤ × MEMBER))" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm39"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm39"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuK"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm42/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuK"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),i⦂ℤ,j⦂ℤ·l∈LIST∧i∈dom(l)∧j∈1 ‥ card(l) − 1⇒j∈dom(DELETE(l ↦ i))" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm39"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm39"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuK"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm43/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuL"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),i⦂ℤ,j⦂ℤ·l∈LIST∧i∈dom(l)∧j∈1 ‥ i − 1⇒l ↦ i∈dom(DELETE)∧DELETE∈ℙ(ℤ × MEMBER) × ℤ ⇸ ℙ(ℤ × MEMBER)∧j∈dom(DELETE(l ↦ i))∧DELETE(l ↦ i)∈ℤ ⇸ MEMBER∧j∈dom(l)∧l∈ℤ ⇸ MEMBER" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm40"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm40"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuL"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm44/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuM"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),i⦂ℤ,j⦂ℤ·(l∈LIST∧i∈dom(l)⇒finite(l))∧(l∈LIST∧i∈dom(l)∧j∈i ‥ card(l) − 1⇒l ↦ i∈dom(DELETE)∧DELETE∈ℙ(ℤ × MEMBER) × ℤ ⇸ ℙ(ℤ × MEMBER)∧j∈dom(DELETE(l ↦ i))∧DELETE(l ↦ i)∈ℤ ⇸ MEMBER∧j+1∈dom(l)∧l∈ℤ ⇸ MEMBER)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm41"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm41"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuM"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm45/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuN"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),i⦂ℤ·l∈LIST∧i∈dom(l)⇒l ↦ i∈dom(DELETE)∧DELETE∈ℙ(ℤ × MEMBER) × ℤ ⇸ ℙ(ℤ × MEMBER)∧finite(DELETE(l ↦ i))∧finite(l)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm42"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm42"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuN"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm45/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuN"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),i⦂ℤ·l∈LIST∧i∈dom(l)⇒card(DELETE(l ↦ i))=card(l) − 1" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm42"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm42"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuN"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm46/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuO"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),i⦂ℤ·l∈LIST∧i∈dom(l)⇒l ↦ i∈dom(DELETE)∧DELETE∈ℙ(ℤ × MEMBER) × ℤ ⇸ ℙ(ℤ × MEMBER)∧l∈ℤ ⇸ MEMBER" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm43"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm43"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuO"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm46/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuO"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),i⦂ℤ·l∈LIST∧i∈dom(l)⇒ran(DELETE(l ↦ i))=ran(l) ∖ {l(i)}" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm43"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm43"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuO"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm47/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuP"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),i⦂ℤ·l∈LIST∧i∈dom(l)⇒l ↦ i∈dom(DELETE)∧DELETE∈ℙ(ℤ × MEMBER) × ℤ ⇸ ℙ(ℤ × MEMBER)∧finite(DELETE(l ↦ i))∧finite(l)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm44"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm44"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm47/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuP"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),i⦂ℤ·l∈LIST∧i∈dom(l)⇒card(DELETE(l ↦ i))=card(l) − 1" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm44"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm44"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm51/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuT"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),m⦂MEMBER·l∈ILIST∧m∈ran(l)⇒l ↦ m∈dom(IDELETE)∧IDELETE∈ℙ(ℤ × MEMBER) × MEMBER ⇸ ℙ(ℤ × MEMBER)∧finite(l)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm49"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm49"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuT"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm52/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuU"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),m⦂MEMBER·l∈ILIST∧m∈ran(l)⇒l ↦ m∈dom(IDELETE)∧IDELETE∈ℙ(ℤ × MEMBER) × MEMBER ⇸ ℙ(ℤ × MEMBER)∧m∈dom(l∼)∧l∼∈MEMBER ⇸ ℤ∧l ↦ l∼(m)∈dom(DELETE)∧DELETE∈ℙ(ℤ × MEMBER) × ℤ ⇸ ℙ(ℤ × MEMBER)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm48"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm48"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuU"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm53/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuV"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),m⦂MEMBER·l∈ILIST∧m∈ran(l)⇒l ↦ m∈dom(IDELETE)∧IDELETE∈ℙ(ℤ × MEMBER) × MEMBER ⇸ ℙ(ℤ × MEMBER)∧finite(IDELETE(l ↦ m))∧finite(l)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm50"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm50"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuV"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm54/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuW"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),m⦂MEMBER·l∈ILIST∧m∈ran(l)⇒l ↦ m∈dom(IDELETE)∧IDELETE∈ℙ(ℤ × MEMBER) × MEMBER ⇸ ℙ(ℤ × MEMBER)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm51"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm51"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuW"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm54/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuW"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),m⦂MEMBER·l∈ILIST∧m∈ran(l)⇒ran(IDELETE(l ↦ m))=ran(l) ∖ {m}" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm51"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm51"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuW"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm55/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuX"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER)·l∈LIST∧l≠(∅ ⦂ ℙ(ℤ×MEMBER))⇒l∈dom(DEQUEUE)∧DEQUEUE∈ℙ(ℤ × MEMBER) ⇸ ℙ(ℤ × MEMBER)∧l ↦ 1∈dom(DELETE)∧DELETE∈ℙ(ℤ × MEMBER) × ℤ ⇸ ℙ(ℤ × MEMBER)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm52"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm52"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuX"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm55/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuX"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER)·l∈LIST∧l≠(∅ ⦂ ℙ(ℤ×MEMBER))⇒DEQUEUE(l)=DELETE(l ↦ 1)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm52"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm52"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuX"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm56/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuY"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER)·l∈LIST∧l≠(∅ ⦂ ℙ(ℤ×MEMBER))⇒l∈dom(DEQUEUE)∧DEQUEUE∈ℙ(ℤ × MEMBER) ⇸ ℙ(ℤ × MEMBER)∧finite(DEQUEUE(l))∧finite(l)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm53"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm53"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuY"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm56/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuY"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER)·l∈LIST∧l≠(∅ ⦂ ℙ(ℤ×MEMBER))⇒card(DEQUEUE(l))=card(l) − 1" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm53"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm53"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuY"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm57/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuZ"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),i⦂ℤ·l∈ILIST∧i∈dom(l)⇒l∈dom(DEQUEUE)∧DEQUEUE∈ℙ(ℤ × MEMBER) ⇸ ℙ(ℤ × MEMBER)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm54"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm54"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuZ"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm57/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuZ"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),i⦂ℤ·l∈ILIST∧i∈dom(l)⇒DEQUEUE(l)∈ILIST" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm54"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm54"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuZ"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm58/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu["/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),i⦂ℤ·l∈ILIST∧i∈dom(l)⇒l ↦ i∈dom(DELETE)∧DELETE∈ℙ(ℤ × MEMBER) × ℤ ⇸ ℙ(ℤ × MEMBER)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm55"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm55"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu["/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm58/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu["/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),i⦂ℤ·l∈ILIST∧i∈dom(l)⇒DELETE(l ↦ i)∈ILIST" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm55"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm55"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu["/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm59/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu\\"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),m⦂MEMBER·l∈LIST∧m∈MEMBER⇒l ↦ m∈dom(APPEND)∧APPEND∈ℙ(ℤ × MEMBER) × MEMBER ⇸ ℙ(ℤ × MEMBER)∧finite(l)∧APPEND(l ↦ m) ↦ card(l)+1∈dom(DELETE)∧DELETE∈ℙ(ℤ × MEMBER) × ℤ ⇸ ℙ(ℤ × MEMBER)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm56"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm56"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu\\"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="axm59/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu\\"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),m⦂MEMBER·l∈LIST∧m∈MEMBER⇒DELETE(APPEND(l ↦ m) ↦ card(l)+1)=l" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm56"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm56"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu\\"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cty" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="LENGTH∈ℕ" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm1"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_ct{" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cty" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="LIST={l⦂ℙ(ℤ×MEMBER)·l∈ℕ1 ⇸ MEMBER∧dom(l)=1 ‥ card(l) ∣ l}" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm2"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="finite(LIST)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#element5"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_ct}" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_ct{" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="(∅ ⦂ ℙ(ℤ×MEMBER))∈LIST" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm3"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="ILIST={l⦂ℙ(ℤ×MEMBER)·l∈LIST∧l∈ℕ1 ⤔ MEMBER ∣ l}" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm4"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cu'" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_ct}" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="ILIST⊂LIST" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm5"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="(∅ ⦂ ℙ(ℤ×MEMBER))∈ILIST" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm6"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cu(" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu'" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER)·l∈ILIST⇔l∈LIST∧l∈1 ‥ LENGTH ⤔ MEMBER" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm7"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cu)" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu(" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER)·l∈LIST⇒ran(l)=l[dom(l)]" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm8"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cu*" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER)·l∈LIST⇒ran(l)=l[1 ‥ card(l)]" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm9"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cu," org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu*" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER)·l∈LIST∧card(ran(l))=card(dom(l))⇒l∈ILIST" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#element4"/>
+<org.eventb.core.poPredicate name="PRD11" org.eventb.core.predicate="JOIN∈LIST × LIST → LIST" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm10"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cu-" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu," org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD12" org.eventb.core.predicate="dom(JOIN)=LIST × LIST" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm11"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cu." org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu-" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD13" org.eventb.core.predicate="∀l1⦂ℙ(ℤ×MEMBER),l2⦂ℙ(ℤ×MEMBER)·l1∈LIST∧l2∈LIST⇒dom(JOIN(l1 ↦ l2))=1 ‥ card(l1)+card(l2)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm12"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cu/" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu." org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD14" org.eventb.core.predicate="∀l1⦂ℙ(ℤ×MEMBER),l2⦂ℙ(ℤ×MEMBER),i⦂ℤ·l1∈LIST∧l2∈LIST∧i∈dom(JOIN(l1 ↦ l2))⇒(i∈1 ‥ card(l1)⇒JOIN(l1 ↦ l2)(i)=l1(i))∧(i − card(l1)∈1 ‥ card(l2)⇒JOIN(l1 ↦ l2)(i)=l2(i − card(l1)))" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm13"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cu0" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu\/" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD15" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER)·l∈LIST⇒JOIN(l ↦ (∅ ⦂ ℙ(ℤ×MEMBER)))=l" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#element2"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cu1" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu0" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD16" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER)·l∈LIST⇒JOIN((∅ ⦂ ℙ(ℤ×MEMBER)) ↦ l)=l" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#element3"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cu2" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu1" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD17" org.eventb.core.predicate="∀l1⦂ℙ(ℤ×MEMBER),l2⦂ℙ(ℤ×MEMBER)·l1∈ILIST∧l2∈ILIST∧ran(l1)∩ran(l2)=(∅ ⦂ ℙ(MEMBER))⇒JOIN(l1 ↦ l2)∈ILIST" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm14"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cu3" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu2" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD18" org.eventb.core.predicate="∀l1⦂ℙ(ℤ×MEMBER),l2⦂ℙ(ℤ×MEMBER)·l1∈LIST∧l2∈LIST⇒ran(JOIN(l1 ↦ l2))=ran(l1)∪ran(l2)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm15"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cu5" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu3" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD19" org.eventb.core.predicate="∀l1⦂ℙ(ℤ×MEMBER),l2⦂ℙ(ℤ×MEMBER)·l1∈LIST∧l2∈LIST⇒card(JOIN(l1 ↦ l2))=card(l1)+card(l2)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm16"/>
+<org.eventb.core.poPredicate name="PRD20" org.eventb.core.predicate="APPEND∈LIST × MEMBER → LIST" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm17"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cu6" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu5" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD21" org.eventb.core.predicate="dom(APPEND)=LIST × MEMBER" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm18"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cu7" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu6" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD22" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),m⦂MEMBER·l∈LIST⇒dom(APPEND(l ↦ m))=1 ‥ card(l)+1" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm19"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cu8" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu7" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD23" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),m⦂MEMBER,i⦂ℤ·l∈LIST∧i∈dom(APPEND(l ↦ m))⇒(i∈dom(l)⇒APPEND(l ↦ m)(i)=l(i))∧(i=card(l)+1⇒APPEND(l ↦ m)(i)=m)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm20"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cu9" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu8" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD24" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),m⦂MEMBER·l∈LIST∧m∈MEMBER⇒ran(APPEND(l ↦ m))=ran(l)∪{m}" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm21"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cu:" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu9" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD25" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),m⦂MEMBER·l∈LIST∧m∈MEMBER⇒card(APPEND(l ↦ m))=card(l)+1" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm22"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cu=" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu:" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD26" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),m⦂MEMBER·l∈ILIST∧m∈MEMBER∧m∉ran(l)⇒APPEND(l ↦ m)∈ILIST" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm23"/>
+<org.eventb.core.poPredicate name="PRD27" org.eventb.core.predicate="IAPPEND∈ILIST × MEMBER → ILIST" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm24"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cu&gt;" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu=" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD28" org.eventb.core.predicate="dom(IAPPEND)=ILIST × MEMBER" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm25"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cu?" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu&gt;" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD29" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),m⦂MEMBER·l∈LIST⇒dom(IAPPEND(l ↦ m))=dom(APPEND(l ↦ m))" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm26"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cu@" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu?" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD30" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),m⦂MEMBER·l∈ILIST∧m∉ran(l)⇒IAPPEND(l ↦ m)=APPEND(l ↦ m)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm27"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cuB" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu@" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD31" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),m⦂MEMBER·l∈LIST∧m∈MEMBER⇒card(APPEND(l ↦ m))=card(l)+1" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm28"/>
+<org.eventb.core.poPredicate name="PRD32" org.eventb.core.predicate="DEQUEUE∈LIST → LIST" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm29"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cuC" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuB" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD33" org.eventb.core.predicate="dom(DEQUEUE)=LIST" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm30"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cuD" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuC" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD34" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER)·l∈LIST∧l≠(∅ ⦂ ℙ(ℤ×MEMBER))⇒dom(DEQUEUE(l))=1 ‥ card(l) − 1" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm31"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cuE" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuD" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD35" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),i⦂ℤ·l∈LIST∧l≠(∅ ⦂ ℙ(ℤ×MEMBER))∧i∈1 ‥ card(l) − 1⇒DEQUEUE(l)(i)=l(i+1)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm32"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cuF" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuE" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD36" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER)·l∈ILIST∧l≠(∅ ⦂ ℙ(ℤ×MEMBER))⇒DEQUEUE(l)∈ILIST" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm33"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cuH" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuF" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD37" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER)·l∈LIST∧l≠(∅ ⦂ ℙ(ℤ×MEMBER))⇒ran(DEQUEUE(l))=ran(l) ∖ {l(1)}" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm34"/>
+<org.eventb.core.poPredicate name="PRD38" org.eventb.core.predicate="DELETE∈LIST × 1 ‥ LENGTH ⇸ LIST" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm35"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cuJ" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuH" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD39" org.eventb.core.predicate="dom(DELETE)⊆LIST × 1 ‥ LENGTH" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm36"/>
+<org.eventb.core.poPredicate name="PRD40" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),i⦂ℤ·l∈LIST∧i∈dom(l)⇒l ↦ i∈dom(DELETE)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm37"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cuK" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuJ" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD41" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),i⦂ℤ·l∈LIST∧i∈dom(l)⇒dom(DELETE(l ↦ i))=1 ‥ card(l) − 1" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm38"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cuL" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuK" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD42" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),i⦂ℤ,j⦂ℤ·l∈LIST∧i∈dom(l)∧j∈1 ‥ card(l) − 1⇒j∈dom(DELETE(l ↦ i))" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm39"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cuM" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuL" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD43" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),i⦂ℤ,j⦂ℤ·l∈LIST∧i∈dom(l)∧j∈1 ‥ i − 1⇒DELETE(l ↦ i)(j)=l(j)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm40"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cuN" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuM" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD44" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),i⦂ℤ,j⦂ℤ·l∈LIST∧i∈dom(l)∧j∈i ‥ card(l) − 1⇒DELETE(l ↦ i)(j)=l(j+1)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm41"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cuO" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuN" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD45" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),i⦂ℤ·l∈LIST∧i∈dom(l)⇒card(DELETE(l ↦ i))=card(l) − 1" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm42"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cuP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuO" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD46" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),i⦂ℤ·l∈LIST∧i∈dom(l)⇒ran(DELETE(l ↦ i))=ran(l) ∖ {l(i)}" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm43"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cuT" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuP" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD47" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),i⦂ℤ·l∈LIST∧i∈dom(l)⇒card(DELETE(l ↦ i))=card(l) − 1" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm44"/>
+<org.eventb.core.poPredicate name="PRD48" org.eventb.core.predicate="IDELETE∈ILIST × MEMBER ⇸ ILIST" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm45"/>
+<org.eventb.core.poPredicate name="PRD49" org.eventb.core.predicate="dom(IDELETE)=ILIST × MEMBER" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm46"/>
+<org.eventb.core.poPredicate name="PRD50" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),m⦂MEMBER·l∈ILIST∧m∈MEMBER∧m∈ran(l)⇒l ↦ m∈dom(IDELETE)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm47"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cuU" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuT" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD51" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),m⦂MEMBER·l∈ILIST∧m∈ran(l)⇒dom(IDELETE(l ↦ m))=1 ‥ card(l) − 1" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm49"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cuV" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuU" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD52" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),m⦂MEMBER·l∈ILIST∧m∈ran(l)⇒IDELETE(l ↦ m)=DELETE(l ↦ l∼(m))" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm48"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cuW" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuV" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD53" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),m⦂MEMBER·l∈ILIST∧m∈ran(l)⇒card(IDELETE(l ↦ m))=card(l) − 1" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm50"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cuX" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuW" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD54" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),m⦂MEMBER·l∈ILIST∧m∈ran(l)⇒ran(IDELETE(l ↦ m))=ran(l) ∖ {m}" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm51"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cuY" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuX" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD55" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER)·l∈LIST∧l≠(∅ ⦂ ℙ(ℤ×MEMBER))⇒DEQUEUE(l)=DELETE(l ↦ 1)" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm52"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cuZ" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuY" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD56" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER)·l∈LIST∧l≠(∅ ⦂ ℙ(ℤ×MEMBER))⇒card(DEQUEUE(l))=card(l) − 1" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm53"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cu[" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cuZ" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD57" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),i⦂ℤ·l∈ILIST∧i∈dom(l)⇒DEQUEUE(l)∈ILIST" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm54"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPLibrary_cu\" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu[" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD58" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),i⦂ℤ·l∈ILIST∧i∈dom(l)⇒DELETE(l ↦ i)∈ILIST" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm55"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Library/List_ctx.bpo|org.eventb.core.poFile#List_ctx|org.eventb.core.poPredicateSet#HYPLibrary_cu\\" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD59" org.eventb.core.predicate="∀l⦂ℙ(ℤ×MEMBER),m⦂MEMBER·l∈LIST∧m∈MEMBER⇒DELETE(APPEND(l ↦ m) ↦ card(l)+1)=l" org.eventb.core.source="/Library/List_ctx.buc|org.eventb.core.contextFile#List_ctx|org.eventb.core.axiom#axm56"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

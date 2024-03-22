@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd;org.animb.valuation.valBase">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="finite(COIN)" org.eventb.core.source="/RailTicket/Coin.buc|org.eventb.core.contextFile#Coin|org.eventb.core.axiom#1" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="CoinValue∈COIN ↣ ℕ1" org.eventb.core.source="/RailTicket/Coin.buc|org.eventb.core.contextFile#Coin|org.eventb.core.axiom#(" org.eventb.core.theorem="false"/>
+<org.eventb.core.scCarrierSet name="COIN" org.eventb.core.source="/RailTicket/Coin.buc|org.eventb.core.contextFile#Coin|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(COIN)"/>
+<org.eventb.core.scConstant name="CoinValue" org.eventb.core.source="/RailTicket/Coin.buc|org.eventb.core.contextFile#Coin|org.eventb.core.constant#)" org.eventb.core.type="ℙ(COIN×ℤ)"/>
+<org.animb.valuation.scCarrierSetValue name="COIN" org.eventb.core.expression="{One,Two,Five}" org.eventb.core.source="/RailTicket/Coin.buc|org.eventb.core.contextFile#Coin|org.animb.valuation.value#-" org.eventb.core.type="ℙ(COIN)"/>
+<org.animb.valuation.scConstantValue name="CoinValue" org.eventb.core.expression="{One ↦ 1,Two ↦ 2,Five ↦ 5}" org.eventb.core.source="/RailTicket/Coin.buc|org.eventb.core.contextFile#Coin|org.animb.valuation.value#." org.eventb.core.type="ℙ(COIN×ℤ)"/>
+</org.eventb.core.scContextFile>
